@@ -2,7 +2,12 @@
 
 Advanced Layers Theme Installer is a template to help you to publish your Layers Themes to Google Play.
 
-
+##Features
+ *Material Design
+ * Ability to choose only the Overlays you want - not more, not less
+ * Include your Overlays in different colors and let the user decide which he/she likes most
+ * Include additional/optional Overlays for each overlay to choose from
+ * Include mor than one Overlay of one sort, for example two different navbars
 
 ##Implemented open source librarys:
   * SnackBar: https://github.com/nispok/snackbar
