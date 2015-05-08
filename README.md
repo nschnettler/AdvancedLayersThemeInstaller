@@ -4,7 +4,7 @@ Advanced Layers Theme Installer is a template to help you to publish your Layers
 
 
 
-Implemented open source librarys:
+#Implemented open source librarys:
   * SnackBar: https://github.com/nispok/snackbar
   * Observable Scroll View: https://github.com/ksoichiro/Android-ObservableScrollView
   * Floating Action Button: https://github.com/makovkastar/FloatingActionButton
