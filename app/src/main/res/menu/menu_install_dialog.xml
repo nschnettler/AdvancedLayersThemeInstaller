@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.schnettler.hex_layerstheme.activities.AboutActivity">
+    <item android:id="@+id/action_settings" android:title="About"
+        android:orderInCategory="100" android:showAsAction="never" />
+</menu>

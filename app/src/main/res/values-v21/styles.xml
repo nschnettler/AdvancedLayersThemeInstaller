@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:actionMenuTextColor">@color/black</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>
+        <item name="android:navigationBarColor">@color/primary</item>
+
+
+
+    </style>
+
+
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+</resources>

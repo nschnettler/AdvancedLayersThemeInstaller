@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_activity_image_fullscreen" translatable="false">ImageFullscreen</string>
+    <string name="title_activity_fullscreen" translatable="false">FullscreenActivity</string>
+    <string name="title_activity_base" translatable="false">BaseActivity</string>
+    <string name="title_activity_tutorial" translatable="false">Tutorial</string>
+
+
+</resources>

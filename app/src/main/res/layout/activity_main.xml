@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:scaleType="centerCrop"
+        android:id="@+id/image"
+
+        android:background="@drawable/heroimage" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lin2">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height"
+                android:background="@android:color/transparent" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:background="#ffffff"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="32dp"
+                android:text="@string/ShortDescription"
+                android:id="@+id/HeX1"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:textColor="#000000"
+                />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:id="@+id/cardview4"
+                android:elegantTextHeight="false"
+                android:elevation="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.59"
+                android:background="@color/cardview_light_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/WhatsNew0"
+                    android:id="@+id/textView52"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:elevation="5dp" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:text="@string/WhatsNewDetail"
+                    android:id="@+id/textView53"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#000000"
+                    android:elevation="5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:background="#ffffff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:id="@+id/textView51"
+                android:layout_gravity="center"
+                android:textColor="@color/accent"
+                android:textSize="16dp"
+                android:layout_marginTop="0dp"
+                android:padding="8dp"
+                android:onClick="showChangelog"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/horizontalScrollView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="0dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LinearLayoutScreenshots">
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:id="@+id/lin1"
+                android:background="#ffffff">
+
+                <android.support.v7.widget.CardView
+
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/cardview5"
+                    android:elegantTextHeight="false"
+                    android:elevation="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Category1Name"
+                        android:id="@+id/textView55"
+
+                        android:elevation="5dp"
+                        android:textColor="@color/accent"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="16dp"
+                        />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:id="@+id/RlOverlays"
+                        android:layout_marginBottom="16dp">
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="36dp"
+                    android:id="@+id/cardview6"
+                    android:elegantTextHeight="false"
+                    android:elevation="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Category2Name"
+                        android:id="@+id/textView56"
+
+                        android:elevation="5dp"
+                        android:textColor="@color/accent"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:id="@+id/R2Overlays"
+                        android:layout_marginBottom="16dp">
+
+                    </LinearLayout>
+
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:scaleType="center"
+        app:fab_colorNormal="@color/accent"
+        app:fab_colorPressed="@color/accentLight"
+        android:src="@drawable/ic_action_add"
+        android:onClick="installTheme"
+        android:clickable="true" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:scaleType="center"
+        app:fab_colorNormal="@color/accent"
+        app:fab_colorPressed="@color/accentLight"
+        android:src="@drawable/ic_action_add"
+        android:onClick="installTheme"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:visibility="visible" />
+
+
+
+</FrameLayout>
+

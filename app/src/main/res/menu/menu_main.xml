@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/About"
+        android:orderInCategory="100" android:showAsAction="never"/>
+
+    <item android:id="@+id/action_delete" android:title="@string/DeleteOverlay"
+        android:orderInCategory="90" android:showAsAction="never"/>
+
+    <item android:id="@+id/action_install" android:title="@string/InstallOtherOverlays"
+        android:orderInCategory="91" android:showAsAction="never"/>
+
+    <item android:id="@+id/action_reboot" android:title="@string/SoftReboot"
+        android:orderInCategory="92" android:showAsAction="never"/>
+
+    <item android:id="@+id/action_swipeview" android:title="@string/Settings"
+        android:orderInCategory="101" android:showAsAction="never"/>
+</menu>

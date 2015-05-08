@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Don´t change this strings - only the tutorial ones if you really want to -->
+
+    <!-- About screen -->
+
+        <!-- Licenses -->
+        <string name="OpenSourceLicenses">Open Source Licenses:</string>
+        <string name="ApacheLicense" translatable="false">Apache License, Version 2.0</string>
+        <string name="MITLicense" translatable="false">MIT License</string>
+
+
+        <string name="License1">SnackBar</string>
+        <string name="License4">Floating Action Button</string>
+        <string name="License5">NineOldAndroids</string>
+        <string name="License6">Root Tools</string>
+        <string name="License7" translatable="false">Observable Scroll View</string>
+        <string name="License9" translatable="false">ViewPagerIndicator</string>
+
+        <string name="License1about" translatable="false">William Mora</string>
+        <string name="License4about" translatable="false">Oleksandr Melnykov</string>
+        <string name="License5about" translatable="false">Jake Wharton</string>
+        <string name="License6about" translatable="false">Stephen Erickson, Chris Ravenscroft, Dominik Schuermann, Adam Shanks</string>
+        <string name="License7About" translatable="false">Soichiro Kashima</string>
+        <string name="License9about" translatable="false">Jake Wharton</string>
+
+
+        <!-- About the App -->
+        <string name="DevelopedBy">Installer App developed by:</string>
+        <string name="ThemeDevelopedBy">Theme made by:</string>
+        <string name="ThanksTo">Thanks to:</string>
+
+
+
+    <!-- Dialogs -->
+
+        <!-- Action texts -->
+        <string name="Install" translatable="false">INSTALL</string>
+        <string name="Continue">Continue</string>
+        <string name="Close">Close</string>
+        <string name="MoveOverlays">Install Overlays?</string>
+        <string name="Cancel">Cancel</string>
+        <string name="okay" translatable="false">OK</string>
+        <string name="VisitGithub">Visit Github</string>
+        <string name="deleteModeOne">Remove one</string>
+        <string name="deleteModeAll">Remove all</string>
+        <string name="YES">YES</string>
+        <string name="CopyOverlays">Copy</string>
+        <string name="InstallOverlays">Install</string>
+        <string name="Reboot">REBOOT</string>
+        <string name="pick_color">Pick a color</string>
+
+
+        <!-- description and headline texts -->
+        <string name="title_activity_install_dialog">Install?</string>
+        <string name="CreateHeXFolder">Install Overlays to /system/vendor/overlay?</string>
+        <string name="VisitCommunity">Projects progress</string>
+        <string name="SelectDeleteMode">Select delete Mode:</string>
+        <string name="deleteModeAbout">Do you want delete all Overlays or just specific ones?</string>
+        <string name="MoveOverlaystoSdCard">Create a folder on your internal memory and move overlays into it? After that you will be able to install them using the Layers Manager app.</string>
+        <string name="chooseInstallMode">Choose installation method:</string>
+        <string name="SystemUIParts">Select parts of SystemUI to install.</string>
+        <string name="CopyMoveOverlays">Move Overlays?</string>
+        <string name="ChoseInstallationMode">Installation mode?</string>
+        <string name="ChoseInstallationMode2">Please choose an installation mode.</string>
+        <string name="rebooting">Rebooting</string>
+
+
+
+    <!-- Settings Screen -->
+    <string name="General">General</string>
+    <string name="InstallationMethod">Installation Method</string>
+    <string name="FabAllOverlays">FAB installs all Overlays</string>
+    <string name="FabAllOverlaysDetail">Option to install all Overlays at once.</string>
+    <string name="ConfirmInstallationDialog">Show confirm installation dialog</string>
+    <string name="ConfirmInstallationDialogDetail">Always show the dialog where you have to confirm that you want to install Overlays.</string>
+
+
+    <!-- Overflow Menu -->
+    <string name="About">About</string>
+    <string name="DeleteOverlay">Delete Overlay(s)</string>
+    <string name="InstallOtherOverlays">Install other Overlays</string>
+    <string name="SoftReboot">Soft Reboot</string>
+    <string name="action_settings">Settings</string>
+    <string name="Settings">Settings</string>
+
+
+
+    <!-- SnackBar texts -->
+    <string name="OverlaysMoved">Overlays moved</string>
+    <string name="selectOverlayFirst">Select Overlays first</string>
+    <string name="GOTO">GOTO</string>
+    <string name="SnackBarInstall">Install?</string>
+    <string name="RemovedOverays">Removed all Overlays</string>
+    <string name="MoveFinished">Overlays Moved</string>
+    <string name="Layers">Layers</string>
+    <string name="OverlaysInstalled">Overlays installed!</string>
+
+
+
+
+    <!-- Main Activity -->
+    <string name="Changelog">Changelog</string>
+    <string name="WhatsNew0">WHATS NEW</string>
+    <string name="more">MORE</string>
+
+
+
+    <!-- Tutorial Screen -->
+    <string name="Tutorial2Header">Thank you for your support.</string>
+
+    <string name="Tutorial3Header">Install just the Overlays you need.</string>
+    <string name="Tutorial3Body">It´s your device - choose  the Overlays you like and install them. Only those, no more no less.</string>
+
+    <string name="Tutorial4Header">Or all at once.</string>
+    <string name="Tutorial4Body">Just click the FAB to install all Overlays at once. You can disable this behavior in the Settings.</string>
+
+    <string name="Tutorial5Header">Whats your Style?</string>
+    <string name="Tutorial5Body">Choose between four different colors to get the best possible experience.</string>
+
+    <string name="Tutorial6Header">And much more.</string>
+    <string name="Tutorial6Body">Delete one or all Overlays* \nInstall other Overlays* \nPerform a SoftReboot \n\n\n*Opens Layers Manager App</string>
+
+</resources>

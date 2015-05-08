@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/General"
+        android:key="first_category">
+
+
+        <ListPreference
+            android:key="InstallationMode"
+            android:title="Installation Method"
+            android:summary="%s"
+            android:defaultValue="1000"
+            android:entries="@array/installMethod"
+            android:entryValues="@array/installMethod"
+
+            />
+
+        <SwitchPreference
+            android:key="FABInstallAllOverlays"
+            android:title="@string/FabAllOverlays"
+            android:defaultValue="true"
+            android:summary="@string/FabAllOverlaysDetail"
+        />
+
+        <SwitchPreference
+            android:key="ConfirmInstallationDialog"
+            android:title="@string/ConfirmInstallationDialog"
+            android:defaultValue="true"
+            android:summary="@string/ConfirmInstallationDialogDetail"
+            />
+
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
