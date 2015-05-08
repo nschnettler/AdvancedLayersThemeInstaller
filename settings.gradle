@@ -1,3 +1,2 @@
 include ':app'
-include ':libs'
-include ':library'
+
