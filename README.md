@@ -1,6 +1,6 @@
 # AdvancedLayersThemeInstaller
 
-Advanced Layers Theme Installer is a template to help you to publish your apps to Google Play.
+Advanced Layers Theme Installer is a template to help you to publish your Layers Themes to Google Play.
 
 
 
