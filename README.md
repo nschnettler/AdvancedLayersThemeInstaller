@@ -10,7 +10,7 @@ Advanced Layers Theme Installer is a template to help you to publish your Layers
  * Include more than one Overlay of one sort, for example two different navbars
 
 #How to use
-Ypu will find a pdf with instructions at the top.
+You will find a pdf with instructions at the top.
 
 ##Implemented open source librarys:
   * SnackBar: https://github.com/nispok/snackbar
