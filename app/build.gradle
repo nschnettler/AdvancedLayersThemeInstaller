@@ -3,9 +3,6 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 android {
