@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.schnettler.hex_layerstheme"
+    android:versionCode="1"
+    android:versionName="B1.0" >
+>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/AppName"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Your Theme Name"
+            android:theme="@style/AppTheme.Toolbar" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/About"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/Settings"
+            android:theme="@style/Theme.TranslucentActionBar"
+            android:parentActivityName=".activities.MainActivity" >>
+        </activity>
+
+
+        <activity
+            android:name=".activities.ImageViewerActivity"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/AppThemeAppcompat" >
+        </activity>
+
+        <activity
+            android:name=".activities.BaseActivity"
+            android:label="@string/title_activity_base" >
+        </activity>
+
+
+
+        <activity
+            android:name=".activities.TutorialActivity"
+            android:label="@string/title_activity_tutorial"
+            android:theme="@style/Tutorial">
+        </activity>
+    </application>
+
+</manifest>

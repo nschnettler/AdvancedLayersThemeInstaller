@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tutorial screen at first app launch -->
+    <string name="ShortDescription">A short description of your\ntheme will appear here</string>
+    <string name="Tutorial2Body">A message where you tell the person who bought your theme how much you love him :D</string>
+
+    <!-- Main screen -->
+    <string name="WhatsNewDetail">A short summary of whats new since the last update will appear here\nYou will only see the first four lines here.\nThe rest can be found after clicking on more:\n\nHey, I´m the rest of the changelog and only visible here!</string>
+    <string name="Category2Name">Category 2 Name:</string>
+    <string name="Category1Name">Category 1 Name:</string>
+
+    <!-- About screen -->
+    <string name="NameOfThemeDeveloper">Your Name</string>
+    <string name="community">https://plus.google.com/u/0/communities/106760580459162955867</string>                            <!-- Link to your google plus community (if you have one... ) -->
+    <string name="LinkToYourProfile">https://plus.google.com/+NiklasSchnettler/posts</string>
+
+    <!-- General -->
+    <string name="AppName">Your Theme Name</string>
+
+</resources>
