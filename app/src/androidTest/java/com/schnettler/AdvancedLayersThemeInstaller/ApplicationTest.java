@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme;
+package com.schnettler.AdvancedLayersThemeInstaller;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

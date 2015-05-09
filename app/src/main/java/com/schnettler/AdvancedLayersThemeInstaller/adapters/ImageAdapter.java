@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.adapters;
+package com.schnettler.AdvancedLayersThemeInstaller.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.schnettler.hex_layerstheme.R;
-import com.schnettler.hex_layerstheme.activities.MainActivity;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
+import com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity;
 
 /**
  * Created by Niklas on 09.04.2015.

@@ -1,12 +1,12 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.schnettler.hex_layerstheme.R;
-import com.schnettler.hex_layerstheme.adapters.ImageAdapter;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
+import com.schnettler.AdvancedLayersThemeInstaller.adapters.ImageAdapter;
 
 /**
  * Created by Niklas on 09.04.2015.

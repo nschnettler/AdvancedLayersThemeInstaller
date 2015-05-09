@@ -14,12 +14,12 @@ android {
     compileSdkVersion 22
     buildToolsVersion '22.0.0'
     defaultConfig {
-        applicationId "com.schnettler.hex_layerstheme"
+        applicationId "com.schnettler.AdvancedLayersThemeInstaller"
         minSdkVersion 21
         targetSdkVersion 22
 
-        versionCode 26
-        versionName "OpenSource v1A"
+        versionCode 1
+        versionName "OpenSource 1"
     }
     buildTypes {
         release {

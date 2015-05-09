@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,8 +13,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.schnettler.hex_layerstheme.adapters.CustomListAdapter;
-import com.schnettler.hex_layerstheme.R;
+import com.schnettler.AdvancedLayersThemeInstaller.adapters.CustomListAdapter;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 
 
 public class AboutActivity extends Activity {

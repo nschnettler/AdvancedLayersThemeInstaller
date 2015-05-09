@@ -1,12 +1,12 @@
-package com.schnettler.hex_layerstheme.adapters;
+package com.schnettler.AdvancedLayersThemeInstaller.adapters;
 
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment1;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment2;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment3;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment4;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment5;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment6;
-import com.schnettler.hex_layerstheme.fragments.TutorialFragment7;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment1;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment2;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment3;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment4;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment5;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment6;
+import com.schnettler.AdvancedLayersThemeInstaller.fragments.TutorialFragment7;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

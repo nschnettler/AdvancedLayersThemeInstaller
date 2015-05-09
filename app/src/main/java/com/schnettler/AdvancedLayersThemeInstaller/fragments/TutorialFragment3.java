@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.fragments;
+package com.schnettler.AdvancedLayersThemeInstaller.fragments;
 
 
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.schnettler.hex_layerstheme.R;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 
 public class TutorialFragment3 extends Fragment {
 

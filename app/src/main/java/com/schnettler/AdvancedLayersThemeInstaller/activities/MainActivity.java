@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -37,10 +37,10 @@ import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.SnackbarManager;
 import com.nispok.snackbar.listeners.ActionClickListener;
 
-import com.schnettler.hex_layerstheme.R;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 
-import com.schnettler.hex_layerstheme.helper.CopyUnzipHelper;
-import com.schnettler.hex_layerstheme.helper.RootCommandsInstallationHelper;
+import com.schnettler.AdvancedLayersThemeInstaller.helper.CopyUnzipHelper;
+import com.schnettler.AdvancedLayersThemeInstaller.helper.RootCommandsInstallationHelper;
 import com.stericson.RootTools.RootTools;
 
 import com.stericson.RootTools.exceptions.RootDeniedException;
@@ -49,7 +49,6 @@ import com.stericson.RootTools.execution.CommandCapture;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 import java.util.concurrent.TimeoutException;
 
 

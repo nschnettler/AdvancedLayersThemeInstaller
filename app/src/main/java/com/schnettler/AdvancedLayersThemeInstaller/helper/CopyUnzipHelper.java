@@ -1,12 +1,11 @@
-package com.schnettler.hex_layerstheme.helper;
+package com.schnettler.AdvancedLayersThemeInstaller.helper;
 
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Environment;
 import android.util.Log;
 
-import com.schnettler.hex_layerstheme.activities.MainActivity;
-import com.stericson.RootTools.RootTools;
+import com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

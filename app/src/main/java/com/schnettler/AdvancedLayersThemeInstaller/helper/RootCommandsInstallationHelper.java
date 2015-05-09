@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.helper;
+package com.schnettler.AdvancedLayersThemeInstaller.helper;
 
 import com.stericson.RootTools.RootTools;
 import com.stericson.RootTools.exceptions.RootDeniedException;

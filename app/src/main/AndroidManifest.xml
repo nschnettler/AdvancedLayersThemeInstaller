@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.schnettler.hex_layerstheme"
+    package="com.schnettler.AdvancedLayersThemeInstaller"
     android:versionCode="1"
     android:versionName="B1.0" >
 >
@@ -12,7 +12,7 @@
         android:label="@string/AppName"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity"
             android:label="Your Theme Name"
             android:theme="@style/AppTheme.Toolbar" >
 
@@ -25,37 +25,37 @@
 
 
         <activity
-            android:name=".activities.AboutActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.AboutActivity"
             android:label="@string/About"
-            android:parentActivityName=".activities.MainActivity" >
+            android:parentActivityName="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity" />
         </activity>
 
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.SettingsActivity"
             android:label="@string/Settings"
             android:theme="@style/Theme.TranslucentActionBar"
-            android:parentActivityName=".activities.MainActivity" >>
+            android:parentActivityName="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity" >>
         </activity>
 
 
         <activity
-            android:name=".activities.ImageViewerActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.ImageViewerActivity"
             android:label="@string/title_activity_fullscreen"
             android:theme="@style/AppThemeAppcompat" >
         </activity>
 
         <activity
-            android:name=".activities.BaseActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.BaseActivity"
             android:label="@string/title_activity_base" >
         </activity>
 
 
 
         <activity
-            android:name=".activities.TutorialActivity"
+            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.TutorialActivity"
             android:label="@string/title_activity_tutorial"
             android:theme="@style/Tutorial">
         </activity>

@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.support.v7.app.ActionBarActivity;
 
@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 
-import com.schnettler.hex_layerstheme.R;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 
 import java.util.ArrayList;
 

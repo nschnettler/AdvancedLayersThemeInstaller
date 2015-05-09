@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.schnettler.hex_layerstheme.R;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.PageIndicator;
 
-import com.schnettler.hex_layerstheme.adapters.TabsPagerAdapter;
+import com.schnettler.AdvancedLayersThemeInstaller.adapters.TabsPagerAdapter;
 
 
 public class TutorialActivity extends FragmentActivity {

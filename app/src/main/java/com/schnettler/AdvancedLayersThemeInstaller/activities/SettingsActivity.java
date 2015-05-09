@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.activities;
+package com.schnettler.AdvancedLayersThemeInstaller.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,8 +7,7 @@ import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
-import com.schnettler.hex_layerstheme.R;
-import com.schnettler.hex_layerstheme.activities.MainActivity;
+import com.schnettler.AdvancedLayersThemeInstaller.R;
 
 /**
  * Created by Niklas on 04.04.2015.

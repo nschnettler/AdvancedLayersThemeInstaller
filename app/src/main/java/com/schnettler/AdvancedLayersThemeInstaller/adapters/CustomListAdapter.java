@@ -1,4 +1,4 @@
-package com.schnettler.hex_layerstheme.adapters;
+package com.schnettler.AdvancedLayersThemeInstaller.adapters;
 
         import android.app.Activity;
         import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ package com.schnettler.hex_layerstheme.adapters;
         import android.widget.ImageView;
         import android.widget.TextView;
 
-        import com.schnettler.hex_layerstheme.R;
+        import com.schnettler.AdvancedLayersThemeInstaller.R;
 
 public class CustomListAdapter extends ArrayAdapter<String>{
     private final Activity context;
