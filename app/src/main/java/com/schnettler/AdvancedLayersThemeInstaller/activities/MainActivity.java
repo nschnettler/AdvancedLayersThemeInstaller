@@ -453,6 +453,12 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
             CardViewCategory2.setVisibility(View.GONE);
         }
 
+        //If there arent any normal Overlays, hide the cardview
+        if(NumberOfOverlays==0) {
+            CardView CardViewCategory1 = (CardView)findViewById(R.id.cardview5);
+            CardViewCategory1.setVisibility(View.GONE);
+        }
+
 
         //Fading ActionBar
         prepareFadingActionBar();
