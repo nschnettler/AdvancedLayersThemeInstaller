@@ -60,11 +60,11 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
     final int NumberOfOverlays = 6;        //Number of "Normal Overlays
     final int NumberOfColorOverlays = 5;    //Number of Overlays which are available in different Colors
 
-    final int NumberOfColors = 2;           //Number of available Colors (0 if none)
+    final int NumberOfColors = 2;           //Number of available Colors (0 if you only use normal Overlays)
 
     public static final int NumberOfScreenshots = 16;
 
-    public static String ThemeName = "Test";         //Name of the folder created in /Overlays
+    public static String ThemeName = "Test";         //Name of the folder created in /Overlays. This name should not include spaces.
 
 
 
@@ -158,21 +158,25 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
         //Names Of "normal" Overlays
-        OverlayName[0] = "App Name 1";
-        OverlayName[1] = "App Name 2";
+
+        OverlayName[0] = "App Name 1";                  //Name of app which is Overlayed by first Overlay
+        OverlayName[1] = "App Name 2";                  //...
         OverlayName[2] = "App Name 3";
         OverlayName[3] = "App Name 4";
         OverlayName[4] = "App Name 5";
         OverlayName[5] = "App Name 6";
 
-        OverlayName[6] =  "Nothing";
 
-        //Names of color specific Overlays
-        OverlayName[7] = "Color App Name 1";
+        //Names of color specific Overlays, delete them if you dont use color specific Overlays
+
+        OverlayName[6] =  "";                              //If you use color specific Overlays add a OverlayName[] after the last normal overlay one.
+
+        OverlayName[7] = "Color App Name 1";              //name of the app which is Overlayed by the first color specific Overlay
         OverlayName[8] = "Color App Name 2";
         OverlayName[9] = "Color App Name 3";
         OverlayName[10] = "Color App Name 4";
         OverlayName[11] = "Color App Name 5";
+
 
 
         //Colors your theme is available in
@@ -184,8 +188,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
 
-        //Add optional / additional Overlays
-
+        //Add optional / additional Overlays remove the /* and */ if you want to use additional Overlays. Remove the ones I wrote and add those yyou need. This is only a example.
+/*
         InstallAdditionalOverlays[0][0] = 1;                        //First App has additional Overlays
         NumberOfAdditionalOverlays[0] = 2;                          //How many additional Overlays App1 has
         //ShowAdditionalOverlaysDialog[0] = true;                   //Show a Dialog where the user can select which Overlays to install?
@@ -209,6 +213,9 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
         AdditionalOverlayName[8][1] = "Additional Overlay 5 With RadioDialog";
         AdditionalOverlayName[8][2] = "Additional Overlay 6 With RadioDialog";
 
+*/
+
+
 
 
 
@@ -226,10 +233,18 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
         //Generate filepaths of normal Overlays
-        for (int i = 0; i <NumberOfOverlays+NumberOfColorOverlays+1;i++){
-            String CurrentOverlyName = OverlayName[i].replaceAll(" ", "");
-            OverlayPath[i] = ThemeName+"_"+CurrentOverlyName+".apk";
+        if (NumberOfOverlays==0){
+            for (int i = 1; i <NumberOfOverlays+NumberOfColorOverlays+1;i++){
+                String CurrentOverlyName = OverlayName[i].replaceAll(" ", "");
+                OverlayPath[i] = ThemeName+"_"+CurrentOverlyName+".apk";
 
+            }
+        }else {
+            for (int i = 0; i < NumberOfOverlays + NumberOfColorOverlays + 1; i++) {
+                String CurrentOverlyName = OverlayName[i].replaceAll(" ", "");
+                OverlayPath[i] = ThemeName + "_" + CurrentOverlyName + ".apk";
+
+            }
         }
 
         //Generate filepaths of normal additional Overlays
