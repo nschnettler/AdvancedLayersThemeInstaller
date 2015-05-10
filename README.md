@@ -9,6 +9,9 @@ Advanced Layers Theme Installer is a template to help you to publish your Layers
  * Include additional/optional Overlays for each overlay to choose from
  * Include more than one Overlay of one sort, for example two different navbars
 
+#How to use
+You will find a pdf with instructions at the top.
+
 ##Implemented open source librarys:
   * SnackBar: https://github.com/nispok/snackbar
   * Observable Scroll View: https://github.com/ksoichiro/Android-ObservableScrollView
