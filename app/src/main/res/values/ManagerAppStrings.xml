@@ -106,19 +106,6 @@
 
 
 
-    <!-- Tutorial Screen -->
-    <string name="Tutorial2Header">Thank you for your support.</string>
 
-    <string name="Tutorial3Header">Install just the Overlays you need.</string>
-    <string name="Tutorial3Body">It´s your device - choose  the Overlays you like and install them. Only those, no more no less.</string>
-
-    <string name="Tutorial4Header">Or all at once.</string>
-    <string name="Tutorial4Body">Just click the FAB to install all Overlays at once. You can disable this behavior in the Settings.</string>
-
-    <string name="Tutorial5Header">Whats your Style?</string>
-    <string name="Tutorial5Body">Choose between four different colors to get the best possible experience.</string>
-
-    <string name="Tutorial6Header">And much more.</string>
-    <string name="Tutorial6Body">Delete one or all Overlays* \nInstall other Overlays* \nPerform a SoftReboot \n\n\n*Opens Layers Manager App</string>
 
 </resources>
