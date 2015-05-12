@@ -9,6 +9,7 @@
     <string name="WhatsNewDetail">A short summary of whats new since the last update will appear here\nYou will only see the first four lines here.\nThe rest can be found after clicking on more:\n\nHey, I´m the rest of the changelog and only visible here!</string>
     <string name="Category2Name">Category 2 Name:</string>
     <string name="Category1Name">Category 1 Name:</string>
+    <string name="ProjectsProgress">https://plus.google.com/+NiklasSchnettler/posts/hM6Pp3ZoqFp</string>                      <!-- Link to a website/Google Plus post with a longer changelog -->
 
     <!-- About screen -->
     <string name="NameOfThemeDeveloper">Your Name</string>

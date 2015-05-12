@@ -75,6 +75,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
     private int whichRadioButton = 1;
 
+    String ProjectsProgress = null;
+
     private int atleastone=0;
 
     public static final int NumberOfScreenshotsMain = 3;
@@ -256,6 +258,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 }
             }
         }
+
+        ProjectsProgress = this.getString(R.string.ProjectsProgress);
 
 
         //Scroll view with screenshots
@@ -1352,7 +1356,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 .setView(LayoutInflater.from(this).inflate(R.layout.main_whatsnewdialog, null))
                 .setPositiveButton(R.string.VisitCommunity, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+NiklasSchnettler/posts/hM6Pp3ZoqFp")));
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(ProjectsProgress)));
                     }
                 })
                 .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
