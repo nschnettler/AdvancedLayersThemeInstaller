@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity"
-            android:label="Your Theme Name"
+            android:label="@string/AppName"
             android:theme="@style/AppTheme.Toolbar" >
 
             <intent-filter>
