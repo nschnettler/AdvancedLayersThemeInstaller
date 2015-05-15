@@ -26,8 +26,9 @@
 
         <activity
             android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.AboutActivity"
-            android:label="@string/About"
-            android:parentActivityName="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity" >
+            android:parentActivityName="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity"
+            android:label=""
+            android:theme="@style/Toolbar2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity" />

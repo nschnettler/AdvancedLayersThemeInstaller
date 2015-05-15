@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.schnettler.AdvancedLayersThemeInstaller.adapters.CustomListAdapter;
 import com.schnettler.AdvancedLayersThemeInstaller.R;
@@ -75,6 +76,10 @@ public class AboutActivity extends Activity {
         String[] web3 = {
                 test,
         };
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        setActionBar(toolbar);
 
         //List 2
         CustomListAdapter adapter = new
