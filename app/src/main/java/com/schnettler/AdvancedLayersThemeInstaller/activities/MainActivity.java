@@ -860,10 +860,16 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 NumberOfSelectedColorOverlays = NumberOfSelectedColorOverlays + InstallOverlay[i];
             }
 
+            int NumberOfSelectedAdditionalOveerlays = 0;
+            for (int i= 0; i < NumberOfOverlays+NumberOfColorOverlays+1;i++){
+                for (int e=0; e< NumberOfAdditionalOverlays[i]+1;e++){
+                    NumberOfSelectedAdditionalOveerlays = NumberOfSelectedAdditionalOveerlays + InstallAdditionalOverlays[i][e+1];
+                }
+            }
 
 
             CopyUnzipHelper cls2= new CopyUnzipHelper();
-            cls2.unzip(ThemeName, NumberOfSelectedNormalOverlays, NumberOfSelectedColorOverlays, whichColor);
+            cls2.unzip(ThemeName, NumberOfSelectedNormalOverlays, NumberOfSelectedColorOverlays, whichColor,NumberOfSelectedAdditionalOveerlays);
 
         }
 

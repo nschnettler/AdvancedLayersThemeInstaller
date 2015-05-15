@@ -113,11 +113,11 @@ public class CopyUnzipHelper {
 
     //unzip
 
-    public void unzip(String ThemeName,  int NumberOfSelectedNormalOverlays, int NumberOfSelectedColorOverlays, String whichColor ) {
+    public void unzip(String ThemeName,  int NumberOfSelectedNormalOverlays, int NumberOfSelectedColorOverlays, String whichColor , int NumberOfSelectedAdditionalOverlays) {
 
         String filePath = null;
 
-        if (NumberOfSelectedNormalOverlays > 0) {
+        if (NumberOfSelectedNormalOverlays > 0 || NumberOfSelectedAdditionalOverlays > 0) {
 
             File GeneralDirectory = new File(Environment.getExternalStorageDirectory() +"/Overlays/"+ThemeName+"/General");
             GeneralDirectory.mkdirs();
@@ -153,7 +153,7 @@ public class CopyUnzipHelper {
             }
         }
 
-        if (NumberOfSelectedColorOverlays > 0) {
+        if (NumberOfSelectedColorOverlays > 0 || NumberOfSelectedAdditionalOverlays > 0) {
 
 
 
