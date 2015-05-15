@@ -891,8 +891,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                     InstallAdditionalOverlays[i3][e + 1] = 1;
                     if (AdditionalDialogMode[i3] == 1) {
                         InstallAdditionalOverlays[i3][NumberOfAdditionalOverlays[i3]] = 1;
-                        for (int f = 0; f < NumberOfAdditionalOverlays[i3]; f++) {
-                            InstallAdditionalOverlays[i3][f+1] = 0;
+                        for (int f = 1; f < NumberOfAdditionalOverlays[i3]; f++) {
+                            InstallAdditionalOverlays[i3][f] = 0;
                         }
                     }
                 }
