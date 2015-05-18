@@ -22,9 +22,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dip"
-        app:fillColor="#FFFFFF"
+        app:fillColor="@color/tutorial_page_indicator"
         app:radius="4dp"
-        app:strokeColor="#FFFFFF"
+        app:strokeColor="@color/tutorial_page_stroke"
 android:layout_marginBottom="17dp"
         android:layout_alignParentBottom="true"/>
 
