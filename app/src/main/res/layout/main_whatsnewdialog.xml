@@ -7,8 +7,7 @@
 
     android:layout_marginTop="16dp"
     android:layout_marginRight="8dp"
-    android:layout_marginLeft="8dp"
-    >
+    android:layout_marginLeft="8dp">
 <LinearLayout
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/WhatsNewDetail"
         android:id="@+id/textView34671"
-        android:textColor="#000000"
+        android:textColor="@color/textColorPrimary"
         android:textSize="16dp" />
 
 </LinearLayout>

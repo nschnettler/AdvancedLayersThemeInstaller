@@ -14,8 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-import com.schnettler.AdvancedLayersThemeInstaller.adapters.CustomListAdapter;
 import com.schnettler.AdvancedLayersThemeInstaller.R;
+import com.schnettler.AdvancedLayersThemeInstaller.adapters.CustomListAdapter;
 
 
 public class AboutActivity extends Activity {
@@ -23,45 +23,39 @@ public class AboutActivity extends Activity {
     ListView list2;
     ListView list3;
     ListView list4;
+    ListView list5;
     String community = null;
     String LinkToYourProfile = null;
     String[] web1 = {
             "Niklas Schnettler",
-
     } ;
-
+    String[] web2 = {
+            "Bitsyko Development Team",
+    } ;
     String[] web4 = {
             "Mailson Campos",
-
+    } ;
+    String[] web5 = {
+            "Stefano Trevisani",
     } ;
 
     Integer[] imageId1 = {
             R.drawable.niklas,
-
     };
-
-    String[] web2 = {
-            "Bitsyko Development Team",
-
-    } ;
     Integer[] imageId2 = {
             R.drawable.bitsyko,
-
     };
-
-
     Integer[] imageId3 = {
             R.drawable.themedeveloper,
-
     };
-
     Integer[] imageId4 = {
             R.drawable.mailson,
-
     };
-    //String web3 = "Just Install Overlays";
+    Integer[] imageId5 = {
+            R.drawable.stefano,
+    };
 
-    //String imageId3 = "Test";
+
 
 
 
@@ -132,6 +126,18 @@ public class AboutActivity extends Activity {
             }
         });
 
+        //List5
+        CustomListAdapter adapter5 = new
+                CustomListAdapter(AboutActivity.this, web5, imageId5);
+        list5=(ListView)findViewById(R.id.listView5);
+        list5.setAdapter(adapter5);
+        list5.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+StefanoTrevisani/posts")));
+            }
+        });
+
 
 
 
@@ -159,30 +165,6 @@ public class AboutActivity extends Activity {
 
 
     }
-
-
-    //@Override
-    /*public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_install_dialog, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
 
 
     public void License1(View view) {
@@ -328,30 +310,6 @@ public class AboutActivity extends Activity {
                     }
                 })
                 .show();
-    }
-
-    public void GPlusNiklas(View view) {
-        // Do something in response to button
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+NiklasSchnettler/posts")));
-
-    }
-
-    public void GPlusBitSyko(View view) {
-        // Do something in response to button
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/communities/102261717366580091389")));
-
-    }
-
-    public void BitSykoWebsite(View view) {
-        // Do something in response to button
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bitsyko.com/")));
-
-    }
-
-    public void XDABitSyko(View view) {
-        // Do something in response to button
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://forum.xda-developers.com/android/apps-games/official-layers-bitsyko-apps-rro-t3012172")));
-
     }
 
     public void openCommunity(View view) {

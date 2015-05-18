@@ -25,7 +25,6 @@ import android.widget.RadioGroup;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
@@ -36,16 +35,12 @@ import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.SnackbarManager;
 import com.nispok.snackbar.listeners.ActionClickListener;
-
 import com.schnettler.AdvancedLayersThemeInstaller.R;
-
 import com.schnettler.AdvancedLayersThemeInstaller.helper.CopyUnzipHelper;
 import com.schnettler.AdvancedLayersThemeInstaller.helper.RootCommandsInstallationHelper;
 import com.stericson.RootTools.RootTools;
-
 import com.stericson.RootTools.exceptions.RootDeniedException;
 import com.stericson.RootTools.execution.CommandCapture;
-
 
 import java.io.File;
 import java.io.IOException;
@@ -320,6 +315,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
             check[i].setText(OverlayName[i]);
             check[i].setTag(i);
             check[i].setId(i);
+            check[i].setTextColor(getResources().getColor(R.color.chooser_text_color));
             check[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 //check if checkbox is clicked
                 @Override
@@ -391,6 +387,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
             check[i].setText(OverlayName[i]);
             check[i].setTag(i);
             check[i].setId(i);
+            check[i].setTextColor(getResources().getColor(R.color.chooser_text_color));
             check[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
                 @Override

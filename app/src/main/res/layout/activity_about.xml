@@ -70,7 +70,7 @@
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
         android:layout_below="@+id/toolbar"
-        android:background="#ffffff">
+        android:background="@color/background">
 
 
 
@@ -108,7 +108,7 @@
                     android:id="@+id/textView14"
                     android:layout_alignParentStart="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#000000"
+                    android:textColor="@color/accent"
                     android:layout_marginTop="16dp"
                     android:layout_below="@+id/textView15" />
 
@@ -136,7 +136,7 @@
                     android:id="@+id/textView19"
                     android:layout_alignParentStart="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#000000"
+                    android:textColor="@color/accent"
                     android:layout_marginTop="16dp"
                     android:layout_below="@+id/View6" />
 
@@ -165,7 +165,7 @@
                     android:id="@+id/textView16"
                     android:layout_alignParentStart="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#000000"
+                    android:textColor="@color/accent"
                     android:layout_marginTop="16dp"
                     android:layout_below="@+id/View2" />
 
@@ -188,6 +188,15 @@
                     android:layout_alignParentStart="true"
                     android:elevation="1dp" />
 
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView5"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@+id/listView4"
+                    android:layout_alignParentStart="true"
+                    android:elevation="1dp" />
+
 
                 <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
                     android:layout_marginRight="0dp"
@@ -195,7 +204,7 @@
                     android:background="#B6B6B6"
                     android:layout_marginTop="16dp"
                     android:id="@+id/View3"
-                    android:layout_below="@+id/listView4" />
+                    android:layout_below="@+id/listView5" />
 
 
                 <TextView
@@ -205,7 +214,7 @@
                     android:id="@+id/textView17"
                     android:layout_alignParentStart="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="#000000"
+                    android:textColor="@color/accent"
                     android:layout_marginTop="16dp"
                     android:layout_below="@+id/View3" />
 
@@ -220,8 +229,11 @@
                     android:elevation="5dp"
                     android:layout_below="@id/textView17"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginLeft="1dp">
+                    android:layout_marginRight="0dp"
+                    android:background="@color/card_background"
+                    card_view:cardBackgroundColor="@color/card_background"
+                    android:backgroundTint="@color/card_background"
+                    android:clickable="false">
 
                     <TextView
                         android:textStyle="bold"
@@ -234,7 +246,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -244,7 +256,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -271,7 +283,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/button_background"
                         android:onClick="License1"
                         android:padding="8dp" />
 
@@ -279,6 +291,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
 
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -287,11 +300,10 @@
                     android:layout_marginTop="16dp"
                     android:id="@+id/cardview5"
                     android:elegantTextHeight="false"
-
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background"
                     android:elevation="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp">
+                    android:layout_marginBottom="8dp">
 
                     <TextView
                         android:textStyle="bold"
@@ -304,7 +316,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -314,7 +326,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -341,7 +353,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/button_background"
                         android:onClick="License3"
                         android:padding="8dp" />
 
@@ -349,6 +361,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
 
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -359,8 +372,8 @@
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginLeft="1dp">
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background">
 
                     <TextView
                         android:textStyle="bold"
@@ -373,7 +386,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -383,7 +396,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -410,7 +423,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/button_background"
                         android:onClick="License4"
                         android:padding="8dp" />
 
@@ -418,6 +431,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
 
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -428,8 +442,8 @@
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginLeft="1dp">
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background">
 
                     <TextView
                         android:textStyle="bold"
@@ -442,7 +456,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -453,7 +467,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="48dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -480,7 +494,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/button_background"
                         android:onClick="License6"
                         android:padding="8dp" />
 
@@ -488,7 +502,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-
+                    card_view:cardBackgroundColor="@color/card_background"
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -498,8 +512,9 @@
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp">
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background">
+
 
 
 
@@ -514,7 +529,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -524,7 +539,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -551,7 +566,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/button_background"
                         android:onClick="License5"
                         android:padding="8dp" />
 
@@ -559,6 +574,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
 
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -569,8 +585,8 @@
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginLeft="1dp">
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background">
 
 
 
@@ -585,7 +601,7 @@
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
                         android:paddingRight="16dp"
-                        android:textColor="#000000" />
+                        android:textColor="@color/about_text" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -595,7 +611,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
 
-                        android:textColor="#000000"
+                        android:textColor="@color/text_color_secondary"
                         android:textSize="14dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -622,7 +638,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
-                        android:background="@drawable/holo_blue_ripple"
+                        android:background="@color/card_background"
                         android:onClick="License9"
                         android:padding="8dp" />
 

@@ -4,24 +4,52 @@
     <color name="primary">#3F51B5</color>
     <color name="primary_dark">#303F9F</color>
     <color name="accent">#4CAF50</color>
-    <color name="textColorPrimary">#ffffff</color>
     <color name="black">#000000</color>
     <color name="ripplenormal">#fafafa</color>
     <color name="Green">#50AF4C</color>
     <color name="gray">#282828</color>
     <color name="accentLight">#66bc69</color>
     <color name="ripplewhite">#ffffff</color>
+    <color name="about_text">@color/textColorPrimary</color>
+    <color name="developer_name">@color/textColorPrimary</color>
+    <color name="transparent">#00000000</color>
+    <color name="tutorial_background">#272727</color>
+    <color name="tutorial_background_dark">#1c1c1c</color>
+    <color name="tutorial_text">@color/text_color_secondary</color>
+    <color name="tutorial_text_secondary">@color/tutorial_text</color>
+    <color name="tutorial_radio">@color/tutorial_text</color>
+    <color name="white">#ffffffff</color>
+    <color name="button_background">@color/card_background</color>
+    <color name="floating_background">@color/card_background</color>
 
 
 
+    <!-- Material Light  -->
+    <color name="background">#ffffffff</color>
+    <color name="card_background">#fffafafa</color>
+    <color name="textColorPrimary">#ff000000</color>
+    <color name="text_color_inverse">#ffffffff</color>
+    <color name="text_color_secondary">#ff727272</color>
+    <color name="chooser_text_color">@color/textColorPrimary</color>
 
 
+    <!-- Material Dark
+    <color name="background">#ff212121</color>
+    <color name="card_background">#ff363636</color>
+    <color name="textColorPrimary">#ffffffff</color>
+    <color name="text_color_inverse">#ff000000</color>
+    <color name="text_color_secondary">#fff5f5f5</color>
+    <color name="chooser_text_color">@color/text_color_secondary</color>
+    -->
 
-
-
-
-
-
+    <!-- Black
+    <color name="background">#ff171717</color>
+    <color name="card_background">#ff212121</color>
+    <color name="textColorPrimary">#ffffffff</color>
+    <color name="text_color_inverse">#ff000000</color>
+    <color name="text_color_secondary">#fff5f5f5</color>
+    <color name="chooser_text_color">@color/text_color_secondary</color>
+    -->
 
 </resources>
 
