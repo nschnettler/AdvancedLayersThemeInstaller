@@ -15,6 +15,8 @@
     <color name="transparent">#00000000</color>
     <color name="tutorial_background">#272727</color>
     <color name="tutorial_background_dark">#1c1c1c</color>
+    <color name="tutorial_page_indicator">@color/tutorial_radio</color>
+    <color name="tutorial_page_stroke">@color/tutorial_page_indicator</color>
     <color name="tutorial_text">@color/text_color_secondary</color>
     <color name="tutorial_text_secondary">@color/tutorial_text</color>
     <color name="tutorial_radio">@color/tutorial_text</color>
