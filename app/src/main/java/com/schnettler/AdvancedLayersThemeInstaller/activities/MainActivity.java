@@ -1398,7 +1398,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 Snackbar.with(MainActivity.this)
                         .text(R.string.MoveFinished)
                         .actionLabel(R.string.Layers)
-                        .actionColor(android.graphics.Color.rgb(76, 175, 80))
+                        .actionColor(getResources().getColor(R.color.accent))
                         .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
                         .color(android.graphics.Color.rgb(40, 40, 40))
                         .actionListener(new ActionClickListener() {
@@ -1422,7 +1422,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 Snackbar.with(MainActivity.this) // context
                         .text(R.string.selectOverlayFirst) // text to display
                         .actionLabel(R.string.GOTO) // action button label
-                        .actionColor(android.graphics.Color.rgb(76, 175, 80))
+                        .actionColor(getResources().getColor(R.color.accent))
                         .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
                         .color(android.graphics.Color.rgb(40, 40, 40)) // change the background color
                         .actionListener(new ActionClickListener() {
@@ -1456,9 +1456,9 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 Snackbar.with(MainActivity.this) // context
                         .text(R.string.OverlaysInstalled) // text to display
                         .actionLabel(R.string.Reboot) // action button label
-                        .actionColor(android.graphics.Color.rgb(76, 175 ,80))
+                        .actionColor(getResources().getColor(R.color.accent))
                         .duration(Snackbar.SnackbarDuration.LENGTH_LONG)
-                        .color(android.graphics.Color.rgb(40,40,40)) // change the background color
+                        .color(android.graphics.Color.rgb(40, 40, 40)) // change the background color
                         .actionListener(new ActionClickListener() {
                             @Override
                             public void onActionClicked(Snackbar snackbar) {
