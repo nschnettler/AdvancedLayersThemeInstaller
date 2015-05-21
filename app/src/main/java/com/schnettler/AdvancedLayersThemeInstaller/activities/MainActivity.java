@@ -302,9 +302,26 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
 
-        //Cardview with normal Overlays
-        LinearLayout my_layout = (LinearLayout)findViewById(R.id.LinearLayoutCategory1);
 
+        LinearLayout CardViewCategory1, CardViewCategory2 ;
+        TextView Category1Name, Category2Name;
+        if (NumberOfOverlays >= NumberOfColorOverlays) {
+            CardViewCategory1 = (LinearLayout) findViewById(R.id.LinearLayoutCategory1);
+            CardViewCategory2 = (LinearLayout) findViewById(R.id.LinearLayoutCategory2);
+            Category1Name = (TextView) findViewById(R.id.Tv_Category1Name);
+            Category1Name.setText(getResources().getString(R.string.Category1Name));
+            Category2Name = (TextView) findViewById(R.id.Tv_Category2Name);
+            Category2Name.setText(getResources().getString(R.string.Category2Name));
+        } else {
+            CardViewCategory1 = (LinearLayout) findViewById(R.id.LinearLayoutCategory2);
+            CardViewCategory2 = (LinearLayout) findViewById(R.id.LinearLayoutCategory1);
+            Category1Name = (TextView) findViewById(R.id.Tv_Category2Name);
+            Category1Name.setText(getResources().getString(R.string.Category1Name));
+            Category2Name = (TextView) findViewById(R.id.Tv_Category1Name);
+            Category2Name.setText(getResources().getString(R.string.Category2Name));
+        }
+
+        //Cardview with normal Overlays
         for (int i = 0; i < NumberOfOverlays; i++)
         {
             TableRow row =new TableRow(this);
@@ -368,14 +385,14 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 }
             });
             row.addView(check[i]);
-            my_layout.addView(row);
+            CardViewCategory1.addView(row);
         }
 
 
 
 
         //CardView with color specific Overlays
-        LinearLayout CardView2 = (LinearLayout)findViewById(R.id.LinearLayoutCategory2);
+
 
         for (int i = NumberOfOverlays+1; i < NumberOfColorOverlays+NumberOfOverlays+1; i++)
         {
@@ -446,20 +463,14 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 }
             });
             row.addView(check[i]);
-            CardView2.addView(row);
+            CardViewCategory2.addView(row);
         }
 
 
         //If there arent any color specific Overlays, hide the cardview
-        if(NumberOfColorOverlays==0) {
-            CardView CardViewCategory2 = (CardView)findViewById(R.id.CardViewCategory2);
-            CardViewCategory2.setVisibility(View.GONE);
-        }
-
-        //If there arent any normal Overlays, hide the cardview
-        if(NumberOfOverlays==0) {
-            CardView CardViewCategory1 = (CardView)findViewById(R.id.CardViewCategory1);
-            CardViewCategory1.setVisibility(View.GONE);
+        if(NumberOfColorOverlays==0 || NumberOfOverlays==0) {
+            CardView CardViewCategory = (CardView)findViewById(R.id.CardViewCategory2);
+            CardViewCategory.setVisibility(View.GONE);
         }
 
 
