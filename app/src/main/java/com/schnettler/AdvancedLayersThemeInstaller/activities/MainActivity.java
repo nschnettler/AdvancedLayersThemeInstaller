@@ -303,7 +303,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
         //Cardview with normal Overlays
-        LinearLayout my_layout = (LinearLayout)findViewById(R.id.RlOverlays);
+        LinearLayout my_layout = (LinearLayout)findViewById(R.id.LinearLayoutCategory1);
 
         for (int i = 0; i < NumberOfOverlays; i++)
         {
@@ -375,7 +375,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
         //CardView with color specific Overlays
-        LinearLayout CardView2 = (LinearLayout)findViewById(R.id.R2Overlays);
+        LinearLayout CardView2 = (LinearLayout)findViewById(R.id.LinearLayoutCategory2);
 
         for (int i = NumberOfOverlays+1; i < NumberOfColorOverlays+NumberOfOverlays+1; i++)
         {
@@ -452,13 +452,13 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
         //If there arent any color specific Overlays, hide the cardview
         if(NumberOfColorOverlays==0) {
-            CardView CardViewCategory2 = (CardView)findViewById(R.id.cardview6);
+            CardView CardViewCategory2 = (CardView)findViewById(R.id.CardViewCategory2);
             CardViewCategory2.setVisibility(View.GONE);
         }
 
         //If there arent any normal Overlays, hide the cardview
         if(NumberOfOverlays==0) {
-            CardView CardViewCategory1 = (CardView)findViewById(R.id.cardview5);
+            CardView CardViewCategory1 = (CardView)findViewById(R.id.CardViewCategory1);
             CardViewCategory1.setVisibility(View.GONE);
         }
 
@@ -1433,7 +1433,7 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                                 scroll.post(new Runnable() {
                                     @Override
                                     public void run() {
-                                        CardView cv = (CardView) findViewById(R.id.cardview6);
+                                        CardView cv = (CardView) findViewById(R.id.CardViewCategory2);
 
                                         scroll.scrollTo(0, cv.getBottom());
                                         //scroll.fullScroll(View.FOCUS_DOWN);

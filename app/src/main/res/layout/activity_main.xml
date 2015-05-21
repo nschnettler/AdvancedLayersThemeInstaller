@@ -75,7 +75,7 @@
                     card_view:cardBackgroundColor="@color/card_background"
 
                     android:layout_marginTop="16dp"
-                    android:id="@+id/cardview4"
+                    android:id="@+id/CradViewWhatsNew"
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginLeft="16dp"
@@ -180,7 +180,7 @@
 
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:id="@+id/cardview5"
+                    android:id="@+id/CardViewCategory1"
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginLeft="16dp"
@@ -206,7 +206,7 @@
                         android:layout_height="fill_parent"
                         android:layout_marginTop="48dp"
                         android:layout_marginLeft="16dp"
-                        android:id="@+id/RlOverlays"
+                        android:id="@+id/LinearLayoutCategory1"
                         android:layout_marginBottom="16dp">
 
 
@@ -231,7 +231,7 @@
 
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="36dp"
-                    android:id="@+id/cardview6"
+                    android:id="@+id/CardViewCategory2"
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginLeft="16dp"
@@ -258,7 +258,7 @@
                         android:layout_height="fill_parent"
                         android:layout_marginTop="48dp"
                         android:layout_marginLeft="16dp"
-                        android:id="@+id/R2Overlays"
+                        android:id="@+id/LinearLayoutCategory2"
                         android:layout_marginBottom="16dp">
 
                     </LinearLayout>
