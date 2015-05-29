@@ -219,6 +219,7 @@
                     android:layout_below="@+id/View3" />
 
                 <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
 
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
@@ -227,13 +228,10 @@
                     android:id="@+id/CardView_License1"
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
-                    android:layout_below="@id/textView17"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginRight="0dp"
                     android:background="@color/card_background"
-                    card_view:cardBackgroundColor="@color/card_background"
                     android:backgroundTint="@color/card_background"
-                    android:clickable="false">
+                    android:layout_below="@+id/textView17">
 
                     <TextView
                         android:textStyle="bold"
@@ -242,216 +240,6 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="@string/License1"
-                        android:id="@+id/Tv_License1"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License1about"
-                        android:id="@+id/Tv_License1About"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/MITLicense"
-                        android:id="@+id/Tv_License1AboutLicense"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
-
-
-                        android:layout_marginTop="56dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information1"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License1"
-                        android:padding="8dp" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License1"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License2"
-                    android:elegantTextHeight="false"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License7"
-                        android:id="@+id/License6"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License7About"
-                        android:id="@+id/textView4553"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ApacheLicense"
-                        android:id="@+id/textView4669"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
-
-
-                        android:layout_marginTop="56dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information2"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License3"
-                        android:padding="8dp" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License2"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License3"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background">
-
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License4"
-                        android:id="@+id/License9"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License4about"
-                        android:id="@+id/textView457"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/MITLicense"
-                        android:id="@+id/textView4661"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
-
-
-                        android:layout_marginTop="56dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information3"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License4"
-                        android:padding="8dp" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License3"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License4"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background">
-
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License6"
                         android:id="@+id/License7"
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
@@ -461,7 +249,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/License6about"
+                        android:text="@string/License1about"
                         android:id="@+id/textView451"
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
@@ -495,80 +283,9 @@
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
                         android:background="@color/button_background"
-                        android:onClick="License6"
-                        android:padding="8dp" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License4"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License5"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background">
-
-
-
-
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License5"
-                        android:id="@+id/License8"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License5about"
-                        android:id="@+id/textView45111"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ApacheLicense"
-                        android:id="@+id/textView466111"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
-
-
-                        android:layout_marginTop="56dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information5"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License5"
-                        android:padding="8dp" />
+                        android:onClick="License1"
+                        android:padding="8dp"
+                        android:nestedScrollingEnabled="false" />
 
 
                 </android.support.v7.widget.CardView>
@@ -579,9 +296,9 @@
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License5"
+                    android:layout_below="@+id/CardView_License1"
                     android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License6"
+                    android:id="@+id/CardView_License2"
                     android:elegantTextHeight="false"
                     android:elevation="5dp"
                     android:layout_marginBottom="8dp"
@@ -596,7 +313,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License9"
+                        android:text="@string/License2"
                         android:id="@+id/License10"
                         android:layout_marginTop="16dp"
                         android:textSize="16dp"
@@ -606,7 +323,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/License9about"
+                        android:text="@string/License2about"
                         android:id="@+id/textView451118"
                         android:layout_marginTop="36dp"
                         android:layout_marginLeft="16dp"
@@ -639,7 +356,79 @@
                         android:layout_gravity="center_vertical|right"
                         android:src="@drawable/information"
                         android:background="@color/card_background"
-                        android:onClick="License9"
+                        android:onClick="License2"
+                        android:padding="8dp" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    card_view:cardBackgroundColor="@color/card_background"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/CardView_License3"
+                    android:elegantTextHeight="false"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/card_background"
+                    android:backgroundTint="@color/card_background"
+                    android:layout_below="@+id/CardView_License2">
+
+
+
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="@string/License3"
+                        android:id="@+id/tv_license3"
+                        android:layout_marginTop="16dp"
+                        android:textSize="16dp"
+                        android:paddingRight="16dp"
+                        android:textColor="@color/about_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/License3about"
+                        android:id="@+id/tv_license3about"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginLeft="16dp"
+
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="14dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ApacheLicense"
+                        android:id="@+id/tv_license3license"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+
+
+                        android:layout_marginTop="72dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imBu_more3"
+                        android:layout_alignBottom="@+id/CradViewWhatsNew"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:src="@drawable/information"
+                        android:background="@color/button_background"
+                        android:onClick="License3"
                         android:padding="8dp" />
 
 

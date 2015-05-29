@@ -9,6 +9,9 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -25,16 +28,7 @@ import android.widget.RadioGroup;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
-import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
-import com.github.ksoichiro.android.observablescrollview.ScrollState;
-import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
-import com.melnykov.fab.FloatingActionButton;
-import com.nineoldandroids.view.ViewHelper;
-import com.nineoldandroids.view.ViewPropertyAnimator;
-import com.nispok.snackbar.Snackbar;
-import com.nispok.snackbar.SnackbarManager;
-import com.nispok.snackbar.listeners.ActionClickListener;
+import com.bumptech.glide.Glide;
 import com.schnettler.AdvancedLayersThemeInstaller.R;
 import com.schnettler.AdvancedLayersThemeInstaller.helper.CopyUnzipHelper;
 import com.schnettler.AdvancedLayersThemeInstaller.helper.RootCommandsInstallationHelper;
@@ -48,7 +42,7 @@ import java.util.concurrent.TimeoutException;
 
 
 
-public class MainActivity extends BaseActivity implements ObservableScrollViewCallbacks, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity {
 
 
     //Variables you HAVE to CHANGE!
@@ -118,20 +112,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
     //Observable Scroll View variables | DON´T Change/////////////////////////
-    private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
-    private static final boolean TOOLBAR_IS_STICKY = true;
-    private View mToolbar;
-    private View mImageView;
-    private View mOverlayView;
-    private ObservableScrollView mScrollView;
-    private TextView mTitleView;
     private View mFab;
-    private int mActionBarSize;
-    private int mFlexibleSpaceShowFabOffset;
-    private int mFlexibleSpaceImageHeight;
-    private int mFabMargin;
-    private int mToolbarColor;
-    private boolean mFabIsShown;
+    private View mFab2;
 
 
 
@@ -146,13 +128,40 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        final android.support.design.widget.FloatingActionButton fab2 = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab2);
 
         if (isFirstTime2()) {
             Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
             startActivity(intent);
         }
-        fab2.hide(false);
+        fab2.setVisibility(View.INVISIBLE);
+
+        //Initialize Layout
+        final android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        CollapsingToolbarLayout collapsingToolbar =
+                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle(getResources().getString(R.string.AppName));
+        loadBackdrop();
+
+
+        mFab = findViewById(R.id.fab);
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                installTheme(this);
+            }
+        });
+
+        mFab2 = findViewById(R.id.fab2);
+        mFab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                installTheme(this);
+            }
+        });
+
 
 
 
@@ -277,8 +286,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
             imageView[i]= new ImageView(this);
-            imageView[i].setTag(+i);
-            imageView[i].setBackgroundColor(getResources().getColor(R.color.primary));
+            //imageView[i].setTag(+i);
+            imageView[i].setBackgroundColor(getResources().getColor(R.color.accent));
 
 
             final int finalI = i;
@@ -289,18 +298,12 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                 }
             });
 
-
-            //imageView.setBackgroundColor(0xff4caf50);
             linear.setLayoutParams(params);
 
             linear.addView(imageView[i]);
             screenshotLayout.addView(linear);
         }
-        imageView[0].setImageResource(R.drawable.screenshot1);
-        imageView[1].setImageResource(R.drawable.screenshot2);
-        imageView[2].setImageResource(R.drawable.screenshot3);
-
-
+        loadScreenshots();
 
 
         LinearLayout CardViewCategory1, CardViewCategory2 ;
@@ -374,10 +377,10 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
                             if (atleastOneIsClicked> 0) {
 
-                                    fab2.show();
+                                   fab2.setVisibility(View.VISIBLE);
 
                             } else {
-                                fab2.hide();
+                                fab2.setVisibility(View.INVISIBLE);
 
                             }
                         }
@@ -450,10 +453,10 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
                             if (atleastOneIsClicked> 0) {
 
                                 isVisible = true;
-                                fab2.show();
+                                fab2.setVisibility(View.VISIBLE);
                             }
                             else {
-                                fab2.hide();
+                                fab2.setVisibility(View.INVISIBLE);
                                 isVisible = false;
                             }
                         }
@@ -473,9 +476,6 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
             CardViewCategory.setVisibility(View.GONE);
         }
 
-
-        //Fading ActionBar
-        prepareFadingActionBar();
 
 
         SharedPreferences myPrefs = this.getSharedPreferences("myPrefs", MODE_WORLD_READABLE);
@@ -504,13 +504,6 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
         }));
 
     }
-
-
-
-
-
-
-
 
     @Override
         public boolean onCreateOptionsMenu(Menu menu) {
@@ -922,11 +915,11 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
         private void UncheckAllCheckBoxes(String Mode) {
-            final FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+            final android.support.design.widget.FloatingActionButton fab2 = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab2);
 
             if (Mode.equals("Uncheck")) {
 
-                fab2.hide();
+                fab2.setVisibility(View.INVISIBLE);
 
                 for (int i = 0; i < NumberOfOverlays; i++){
                     CheckBox checkBox = (CheckBox)findViewById(i);
@@ -1388,100 +1381,44 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     /////////////////////////////////////////
     //SnackBar Methods
     ////////////////////////////////////////
 
     private void moveFinishedSnackbar() {
-        SnackbarManager.show(
-                Snackbar.with(MainActivity.this)
-                        .text(R.string.MoveFinished)
-                        .actionLabel(R.string.Layers)
-                        .actionColor(getResources().getColor(R.color.accent))
-                        .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
-                        .color(android.graphics.Color.rgb(40, 40, 40))
-                        .actionListener(new ActionClickListener() {
-                            @Override
-                            public void onActionClicked(Snackbar snackbar) {
-                                Intent intent = new Intent();
-                                intent.setComponent(new ComponentName("com.lovejoy777.rroandlayersmanager", "com.lovejoy777.rroandlayersmanager.LayersChooser")); //open install Activity of Layers Manager
-                                startActivity(intent);
-                            }
-                        })
 
-        );
+        Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content), R.string.MoveFinished, Snackbar.LENGTH_LONG)
+                .setAction(R.string.Layers, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.setComponent(new ComponentName("com.lovejoy777.rroandlayersmanager", "com.lovejoy777.rroandlayersmanager.LayersChooser")); //open install Activity of Layers Manager
+                        startActivity(intent);
+                    }
+                })
+                .show();
     }
-
-
 
 
     private void selectOverlaysFirstSnackbar() {
 
-        SnackbarManager.show(
-                Snackbar.with(MainActivity.this) // context
-                        .text(R.string.selectOverlayFirst) // text to display
-                        .actionLabel(R.string.GOTO) // action button label
-                        .actionColor(getResources().getColor(R.color.accent))
-                        .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
-                        .color(android.graphics.Color.rgb(40, 40, 40)) // change the background color
-                        .actionListener(new ActionClickListener() {
-                            @Override
-                            public void onActionClicked(Snackbar snackbar) {
-
-                                final ObservableScrollView scroll = (ObservableScrollView) findViewById(R.id.scroll);
-                                scroll.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        CardView cv = (CardView) findViewById(R.id.CardViewCategory2);
-
-                                        scroll.scrollTo(0, cv.getBottom());
-                                        //scroll.fullScroll(View.FOCUS_DOWN);
-                                    }
-                                });
-                            }
-                        })
-        );
+        Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content), R.string.selectOverlayFirst, Snackbar.LENGTH_SHORT)
+                .show();
     }
-
-
-
 
 
 
     private void installationFinishedSnackBar() {
 
         //show SnackBar after sucessfull installation of the overlays
-        SnackbarManager.show(
-                Snackbar.with(MainActivity.this) // context
-                        .text(R.string.OverlaysInstalled) // text to display
-                        .actionLabel(R.string.Reboot) // action button label
-                        .actionColor(getResources().getColor(R.color.accent))
-                        .duration(Snackbar.SnackbarDuration.LENGTH_LONG)
-                        .color(android.graphics.Color.rgb(40, 40, 40)) // change the background color
-                        .actionListener(new ActionClickListener() {
-                            @Override
-                            public void onActionClicked(Snackbar snackbar) {
-
-                                (new Reboot()).execute();
-
-
-                            }
-                        })
-        );
-
-
+        Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content), R.string.OverlaysInstalled, Snackbar.LENGTH_LONG)
+                .setAction(R.string.Reboot, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        (new Reboot()).execute();
+                    }
+                })
+                .show();
     }
 
 
@@ -1520,7 +1457,6 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
         @Override
         protected Void doInBackground(Void... params) {
-
 
             //Mount System to Read / Write
             RootTools.remount("/system/", "RW");
@@ -1587,9 +1523,8 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
             RootTools.remount("/system/", "RO");  //remount /system back to RO
 
-
-
             return null;
+
         }
 
 
@@ -1762,12 +1697,9 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
             //close Dialog
             progressDialogDelete.dismiss();
 
-            SnackbarManager.show(
-                    Snackbar.with(MainActivity.this)
-                            .text(R.string.RemovedOverays)
-                            .duration(Snackbar.SnackbarDuration.LENGTH_SHORT)
-                            .color(android.graphics.Color.rgb(40, 40, 40))
-            );
+            Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content), R.string.RemovedOverays, Snackbar.LENGTH_SHORT)
+                    .show();
+
         }
     }
 
@@ -1776,193 +1708,24 @@ public class MainActivity extends BaseActivity implements ObservableScrollViewCa
 
 
 
+    //Glide Methods
+    private void loadBackdrop() {
+        final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
+        Glide.with(this)
+                .load(R.drawable.heroimage)
+                .centerCrop()
+                .into(imageView);
+    }
 
+    private void loadScreenshots() {
+        //final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
+        for (int i = 0; i< NumberOfScreenshotsMain;i++){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //OBSERVABLE SCROLL VIEW METHODS//////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    @Override
-    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
-        // Translate overlay and image
-        float flexibleRange = mFlexibleSpaceImageHeight - mActionBarSize;
-        int minOverlayTransitionY = mActionBarSize - mOverlayView.getHeight();
-        ViewHelper.setTranslationY(mOverlayView, ScrollUtils.getFloat(-scrollY, minOverlayTransitionY, 0));
-        ViewHelper.setTranslationY(mImageView, ScrollUtils.getFloat(-scrollY / 2, minOverlayTransitionY, 0));
-
-
-        // Change alpha of overlay
-        ViewHelper.setAlpha(mOverlayView, ScrollUtils.getFloat((float) scrollY / flexibleRange, 0, 1));
-
-
-        // Scale title text
-        float scale = 1 + ScrollUtils.getFloat((flexibleRange - scrollY) / flexibleRange, 0, MAX_TEXT_SCALE_DELTA);
-        ViewHelper.setPivotX(mTitleView, 0);
-        ViewHelper.setPivotY(mTitleView, 0);
-        ViewHelper.setScaleX(mTitleView, scale);
-        ViewHelper.setScaleY(mTitleView, scale);
-
-
-        // Translate title text
-        int maxTitleTranslationY = (int) (mFlexibleSpaceImageHeight - mTitleView.getHeight() * scale);
-        int titleTranslationY = maxTitleTranslationY - scrollY;
-        if (TOOLBAR_IS_STICKY) {
-            titleTranslationY = Math.max(0, titleTranslationY);
-        }
-        ViewHelper.setTranslationY(mTitleView, titleTranslationY);
-
-
-        // Translate FAB
-        int maxFabTranslationY = mFlexibleSpaceImageHeight - mFab.getHeight() / 2;
-        float fabTranslationY = ScrollUtils.getFloat(
-                -scrollY + mFlexibleSpaceImageHeight - mFab.getHeight() / 2,
-                mActionBarSize - mFab.getHeight() / 2,
-                maxFabTranslationY);
-
-        ViewHelper.setTranslationX(mFab, mOverlayView.getWidth() - mFabMargin - mFab.getWidth());
-        ViewHelper.setTranslationY(mFab, fabTranslationY);
-
-
-        // Show/hide FAB
-        if (fabTranslationY < mFlexibleSpaceShowFabOffset) {
-            hideFab();
-        } else {
-            showFab();
-        }
-
-        if (TOOLBAR_IS_STICKY) {
-            // Change alpha of toolbar background
-            if (-scrollY + mFlexibleSpaceImageHeight <= mActionBarSize) {
-                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(1, mToolbarColor));
-            } else {
-                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(0, mToolbarColor));
-            }
-        } else {
-
-
-
-            // Translate Toolbar
-            if (scrollY < mFlexibleSpaceImageHeight) {
-                ViewHelper.setTranslationY(mToolbar, 0);
-            } else {
-                ViewHelper.setTranslationY(mToolbar, -scrollY);
-            }
+            Glide.with(this)
+                    .load(GalImages[i])
+                    .into(imageView[i]);
         }
     }
 
-
-    @Override
-    public void onDownMotionEvent() {
-
-    }
-
-    @Override
-    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
-
-    }
-
-
-    private void showFab() {
-        if (!mFabIsShown) {
-            ViewPropertyAnimator.animate(mFab).cancel();
-            ViewPropertyAnimator.animate(mFab).scaleX(1).scaleY(1).setDuration(200).start();
-            mFabIsShown = true;
-        }
-    }
-
-    private void hideFab() {
-        if (mFabIsShown) {
-            ViewPropertyAnimator.animate(mFab).cancel();
-            ViewPropertyAnimator.animate(mFab).scaleX(0).scaleY(0).setDuration(200).start();
-            mFabIsShown = false;
-        }
-    }
-
-    @Override
-    public void onClick(View v) {
-
-    }
-
-
-    private void prepareFadingActionBar(){
-        //Fading Toolbar / parallax image
-        setSupportActionBar((android.support.v7.widget.Toolbar) findViewById(R.id.toolbar));
-        mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
-        mFlexibleSpaceShowFabOffset = getResources().getDimensionPixelSize(R.dimen.flexible_space_show_fab_offset);
-        mActionBarSize = getActionBarSize();
-        mToolbarColor = getResources().getColor(R.color.primary);
-        mToolbar = findViewById(R.id.toolbar);
-        if (!TOOLBAR_IS_STICKY) {
-            mToolbar.setBackgroundColor(android.graphics.Color.TRANSPARENT);
-        }
-        mImageView = findViewById(R.id.image);
-        mOverlayView = findViewById(R.id.overlay);
-        mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
-        mScrollView.setScrollViewCallbacks(MainActivity.this);
-        mTitleView = (TextView) findViewById(R.id.title);
-        mTitleView.setText(getTitle());
-        setTitle(null);
-        mFab = findViewById(R.id.fab);
-        mFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                installTheme(this);
-            }
-        });
-        mFabMargin = getResources().getDimensionPixelSize(R.dimen.margin_standard);
-        ViewHelper.setScaleX(mFab, 0);
-        ViewHelper.setScaleY(mFab, 0);
-        ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
-            @Override
-            public void run() {
-                mScrollView.scrollTo(0, 1);
-            }
-        });
-    }
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-    }
 }
 

@@ -11,11 +11,12 @@
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:actionMenuTextColor">@color/text_color_inverse</item>
 
-
-
     </style>
 
-
+    <style name="Theme.Toolbar" parent="Base.Theme.Toolbar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 
     <style name="TextAppearance">
         <item name="android:textColor">@color/textColorPrimary</item>

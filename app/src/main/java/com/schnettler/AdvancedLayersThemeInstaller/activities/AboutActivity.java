@@ -167,149 +167,76 @@ public class AboutActivity extends Activity {
     }
 
 
+
+
     public void License1(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
 
-
-
-        new AlertDialog.Builder(this)
-                .setTitle("Snackbar")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license1dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
+        View view3 = li.inflate(R.layout.dialog_license, null);
+        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
+        tv_license.setText(R.string.License1more);
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
+                dialog.setTitle(R.string.License1);
+                dialog.setView(view3);
+                dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nispok/snackbar"));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License1github)));
                         startActivity(browserIntent);
-
                     }
-                })
+                });
 
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
-
-
-
-
                     }
-                })
-
-                .show();
-
+                });
+                dialog.show();
     }
 
+    public void License2(View view) {
 
+        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
+        View view3 = li.inflate(R.layout.dialog_license, null);
+        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
+        tv_license.setText(R.string.License2more);
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
+        dialog.setTitle(R.string.License2);
+        dialog.setView(view3);
+        dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License2github)));
+                startActivity(browserIntent);
+            }
+        });
 
-
-
-
-
-
-
+        dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        dialog.show();
+    }
 
 
     public void License3(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
 
-        new AlertDialog.Builder(this)
-                .setTitle("ObservableScrollView")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license2dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ksoichiro/Android-ObservableScrollView"));
-                        startActivity(browserIntent);
-                    }
-                })
+        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
+        View view3 = li.inflate(R.layout.dialog_license, null);
+        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
+        tv_license.setText(R.string.License3more);
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
+        dialog.setTitle(R.string.License3);
+        dialog.setView(view3);
+        dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License3github)));
+                startActivity(browserIntent);
+            }
+        });
 
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
-    }
-
-    public void License4(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
-        new AlertDialog.Builder(this)
-                .setTitle("Floating Action Button")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license3dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/makovkastar/FloatingActionButton"));
-                        startActivity(browserIntent);
-                    }
-                })
-
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
-    }
-
-
-    public void License5(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
-        new AlertDialog.Builder(this)
-                .setTitle("NineOldAndroids")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license4dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/JakeWharton/NineOldAndroids/"));
-                        startActivity(browserIntent);
-                    }
-                })
-
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
-    }
-
-
-    public void License6(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
-        new AlertDialog.Builder(this)
-                .setTitle("Root Tools")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license5dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Stericson/RootTools"));
-                        startActivity(browserIntent);
-                    }
-                })
-
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
-    }
-
-    public void License9(View view) {
-        // Do something in response to button
-        //Intent intent = new Intent(this, About.class);
-        new AlertDialog.Builder(this)
-                .setTitle("ViewPagerIndicator")
-                .setView(LayoutInflater.from(this).inflate(R.layout.about_license6dialog, null))
-                .setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/JakeWharton/ViewPagerIndicator"));
-                        startActivity(browserIntent);
-                    }
-                })
-
-                .setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
+        dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        dialog.show();
     }
 
     public void openCommunity(View view) {

@@ -20,13 +20,12 @@
         </style>
 
         <!-- Main Activity - Toolbar -->
-        <style name="Toolbar" parent="Theme.AppCompat.Light.DarkActionBar">
-            <item name="colorPrimary">@color/primary</item>
-            <item name="colorPrimaryDark">@color/primary_dark</item>
-            <item name="colorAccent">@color/accent</item>
-            <item name="android:actionOverflowButtonStyle">@style/menuOverflow</item>
-            <item name="android:navigationBarColor">@color/primary</item>
-        </style>
+    <style name="Base.Theme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
 
         <!-- Main Activity - Overflow Menu -->
         <style name="popupNew" parent="Theme.AppCompat.Light"/>                                      <!-- MaterialLight: Theme.AppCompat.Light | MaterialDark: Theme.AppCompat -->
