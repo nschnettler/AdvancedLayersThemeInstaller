@@ -21,6 +21,7 @@ public class CustomListAdapter extends ArrayAdapter<String>{
         this.web = web;
         this.imageId = imageId;
     }
+
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
@@ -31,6 +32,4 @@ public class CustomListAdapter extends ArrayAdapter<String>{
         imageView.setImageResource(imageId[position]);
         return rowView;
     }
-
-
 }

@@ -17,12 +17,13 @@ import com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity;
 public class ImageAdapter extends PagerAdapter {
     Context context;
 
-    final int NumberOfScreenshots = MainActivity.NumberOfScreenshots;
     final int[] GalImages = MainActivity.GalImages;
+
 
     public ImageAdapter(Context context){
         this.context=context;
     }
+
     @Override
     public int getCount() {
         return GalImages.length;
@@ -30,25 +31,22 @@ public class ImageAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((ImageView) object);
+        return view == object;
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
-
-
         ImageView imageView = new ImageView(context);
         int padding = context.getResources().getDimensionPixelSize(R.dimen.padding_medium);
         imageView.setPadding(padding, padding, padding, padding);
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setImageResource(GalImages[position]);
-        ((ViewPager) container).addView(imageView, 0);
+        container.addView(imageView, 0);
         return imageView;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewPager) container).removeView((ImageView) object);
+        container.removeView((ImageView) object);
     }
 }

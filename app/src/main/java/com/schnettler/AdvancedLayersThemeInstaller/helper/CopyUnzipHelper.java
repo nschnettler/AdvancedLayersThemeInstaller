@@ -42,28 +42,19 @@ public class CopyUnzipHelper {
             String[] files = assetFiles.list("Files");
 
             //initialize streams
-
-            InputStream in = null;
-            OutputStream out = null;
+            InputStream in;
+            OutputStream out;
 
             for (int i=0; i < files.length; i++) {
 
                 if (files[i].toString().equalsIgnoreCase("images")
                         || files[i].toString().equalsIgnoreCase("js")) {
-
                     //nothing
-
                 } else {
-
                     in= assetFiles.open("Files/" + files[i]);
-
                     out = new FileOutputStream(Environment.getExternalStorageDirectory()+"/Overlays/"+ThemeName+"/"+files[i]);
-
                     copyAssetFiles(in, out);
-
-
                 }
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -79,24 +70,18 @@ public class CopyUnzipHelper {
 
 
 
-
-
     private static void copyAssetFiles(InputStream in, OutputStream out) {
 
         try{
-
             byte[] buffer = new byte [BUFFER_SIZE];
             int read;
-
             while ((read = in.read(buffer)) != -1) {
                 out.write(buffer, 0, read);
             }
 
             in.close();
-            in = null;
             out.flush();
             out.close();
-            out= null;
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -112,24 +97,20 @@ public class CopyUnzipHelper {
 
 
     //unzip
-
     public void unzip(String ThemeName,  int NumberOfSelectedNormalOverlays, int NumberOfSelectedColorOverlays, String whichColor , int NumberOfSelectedAdditionalOverlays) {
 
-        String filePath = null;
+        String filePath;
 
         if (NumberOfSelectedNormalOverlays > 0 || NumberOfSelectedAdditionalOverlays > 0) {
 
             File GeneralDirectory = new File(Environment.getExternalStorageDirectory() +"/Overlays/"+ThemeName+"/General");
             GeneralDirectory.mkdirs();
-
             filePath = Environment.getExternalStorageDirectory() + "/Overlays/"+ThemeName+"/"+ThemeName+"_General.zip";
-
-
 
             try {
                 FileInputStream inputStream = new FileInputStream(filePath);
                 ZipInputStream zipStream = new ZipInputStream(inputStream);
-                ZipEntry zEntry = null;
+                ZipEntry zEntry;
                 while ((zEntry = zipStream.getNextEntry()) != null) {
 
                     FileOutputStream fout = new FileOutputStream(
@@ -154,8 +135,6 @@ public class CopyUnzipHelper {
         }
 
         if (NumberOfSelectedColorOverlays > 0 || NumberOfSelectedAdditionalOverlays > 0) {
-
-
 
             File ColorDirectory = new File(Environment.getExternalStorageDirectory() +"/Overlays/"+ThemeName+"/" + whichColor);
             ColorDirectory.mkdirs();
@@ -189,5 +168,5 @@ public class CopyUnzipHelper {
             }
 
         }
-}
+    }
 }

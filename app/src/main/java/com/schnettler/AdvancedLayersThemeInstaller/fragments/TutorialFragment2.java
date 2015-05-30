@@ -16,7 +16,6 @@ public class TutorialFragment2 extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_tutorial2, container, false);
-
         return rootView;
     }
 }

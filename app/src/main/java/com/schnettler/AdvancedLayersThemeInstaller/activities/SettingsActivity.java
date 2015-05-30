@@ -23,26 +23,16 @@ public class SettingsActivity extends PreferenceActivity {
         addPreferencesFromResource(R.xml.settings);
 
         SharedPreferences myPrefs = this.getSharedPreferences("myPrefs", MODE_WORLD_READABLE);
-        SharedPreferences.Editor editor = myPrefs.edit();
         String InstallationMethod = myPrefs.getString("InstallationMode", "");
 
         ListPreference colour = (ListPreference) findPreference("InstallationMode");
         if (colour.getValue() == null) {
             colour.setValue(InstallationMethod);
         }
-
-
-
-
     }
 
     @Override
         public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
     }
-
-
-
-
-
 }
