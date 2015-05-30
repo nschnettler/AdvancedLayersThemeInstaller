@@ -6,6 +6,8 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.schnettler.AdvancedLayersThemeInstaller.R;
 import com.schnettler.AdvancedLayersThemeInstaller.helper.CopyUnzipHelper;
 import com.schnettler.AdvancedLayersThemeInstaller.helper.RootCommandsInstallationHelper;
@@ -279,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
             int margin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics());
 
             LinearLayout.LayoutParams params
-                    = new LinearLayout.LayoutParams(widht,height);
+                   = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
 
             params.rightMargin = margin;
 
@@ -1718,12 +1721,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadScreenshots() {
-        //final ImageView imageView = (ImageView) findViewById(R.id.backdrop);
         for (int i = 0; i< NumberOfScreenshotsMain;i++){
-
             Glide.with(this)
                     .load(GalImages[i])
-                    .into(imageView[i]);
+                    .asBitmap()
+                    .into(new BitmapImageViewTarget(imageView[i]) {
+                        @Override
+                        protected void setResource(Bitmap resource) {
+
+
+                            Bitmap resized = Bitmap.createScaledBitmap(resource,(int)(resource.getWidth()*0.3), (int)(resource.getHeight()*0.3), true);
+
+                            super.setResource(resized);
+                        }
+                    });
         }
     }
 

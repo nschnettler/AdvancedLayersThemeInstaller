@@ -19,9 +19,7 @@ public class ImageViewerActivity extends Activity {
         setContentView(R.layout.activity_imageviewer);
 
         getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+                View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         ImageAdapter adapter = new ImageAdapter(ImageViewerActivity.this);
@@ -30,7 +28,6 @@ public class ImageViewerActivity extends Activity {
             int result = extras.getInt("image");
             viewPager.setAdapter(adapter);
             viewPager.setCurrentItem(result-1);
-            System.out.println(result);
         }
     }
 }

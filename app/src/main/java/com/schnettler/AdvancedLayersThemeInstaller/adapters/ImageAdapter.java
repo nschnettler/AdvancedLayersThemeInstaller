@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.schnettler.AdvancedLayersThemeInstaller.R;
+import com.schnettler.AdvancedLayersThemeInstaller.activities.ImageViewerActivity;
 import com.schnettler.AdvancedLayersThemeInstaller.activities.MainActivity;
 
 /**
@@ -37,10 +39,11 @@ public class ImageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(context);
-        int padding = context.getResources().getDimensionPixelSize(R.dimen.padding_medium);
-        imageView.setPadding(padding, padding, padding, padding);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        imageView.setImageResource(GalImages[position]);
+        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        Glide.with(context)
+                .load(GalImages[position])
+                .into(imageView);
+
         container.addView(imageView, 0);
         return imageView;
     }
