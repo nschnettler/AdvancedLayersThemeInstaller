@@ -48,12 +48,6 @@
             android:theme="@style/AppThemeAppcompat" >
         </activity>
 
-        <activity
-            android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.BaseActivity"
-            android:label="@string/title_activity_base" >
-        </activity>
-
-
 
         <activity
             android:name="com.schnettler.AdvancedLayersThemeInstaller.activities.TutorialActivity"
