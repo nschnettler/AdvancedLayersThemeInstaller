@@ -21,7 +21,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imageView9"
+        android:id="@+id/imVie_AppLogo"
         android:src="@drawable/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -32,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/AppName"
-        android:id="@+id/textView13"
+        android:id="@+id/tv_AppName"
         android:textColor="#ffffff"
-        android:layout_below="@+id/imageView9"
+        android:layout_below="@+id/imVie_AppLogo"
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:layout_marginTop="8dp"
@@ -44,8 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="version Alpha 5.3"
-        android:id="@+id/textView_version"
-        android:layout_below="@+id/textView13"
+        android:id="@+id/tv_Version"
+        android:layout_below="@+id/tv_AppName"
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:elevation="5dp"
@@ -55,8 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Google Plus Community"
-        android:id="@+id/textView15"
-        android:layout_below="@+id/textView_version"
+        android:id="@+id/tv_Community"
+        android:layout_below="@+id/tv_Version"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
         android:padding="4dp"
@@ -67,7 +67,7 @@
     <ScrollView
 
 
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_width="fill_parent"
         android:layout_below="@+id/toolbar"
         android:background="@color/background">
@@ -85,360 +85,331 @@
             android:id="@+id/General">
 
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:text="@string/ThemeDevelopedBy"
+                android:id="@+id/tv_caption1"
                 android:layout_alignParentStart="true"
-                android:id="@+id/Rl">
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/accent"
+                android:layout_marginTop="16dp"
+                />
 
-                <ListView
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_ThemeDeveloper"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tv_caption1"
+                android:layout_alignParentStart="true"
+                android:elevation="1dp" />
+
+            <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="#B6B6B6"
+                android:layout_below="@+id/listView_ThemeDeveloper"
+                android:layout_marginTop="16dp"
+                android:id="@+id/divider1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DevelopedBy"
+                android:id="@+id/tv_caption2"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/accent"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/divider1" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_AppDeveloper"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tv_caption2"
+                android:layout_alignParentStart="true"
+                android:elevation="1dp" />
+
+            <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="#B6B6B6"
+                android:layout_below="@+id/listView_AppDeveloper"
+                android:layout_marginTop="16dp"
+                android:id="@+id/divider2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ThanksTo"
+                android:id="@+id/tv_caption3"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/accent"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/divider2" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_ThanksTo1"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tv_caption3"
+                android:layout_alignParentStart="true"
+                android:elevation="1dp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_ThanksTo2"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/listView_ThanksTo1"
+                android:layout_alignParentStart="true"
+                android:elevation="1dp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_ThanksTo3"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/listView_ThanksTo2"
+                android:layout_alignParentStart="true"
+                android:elevation="1dp" />
+
+            <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="#B6B6B6"
+                android:layout_marginTop="16dp"
+                android:id="@+id/divider3"
+                android:layout_below="@+id/listView_ThanksTo3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/OpenSourceLicenses"
+                android:id="@+id/tv_caption4"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/accent"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/divider3" />
+
+            <android.support.v7.widget.CardView
+                card_view:cardBackgroundColor="@color/card_background"
+
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/CardView_License1"
+                android:elegantTextHeight="false"
+                android:elevation="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/card_background"
+                android:backgroundTint="@color/card_background"
+                android:layout_below="@+id/tv_caption4">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/listView3"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="@string/License1"
+                    android:id="@+id/tv_license1"
                     android:layout_marginTop="16dp"
-                    android:layout_below="@+id/textView14"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
+                    android:textSize="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/about_text" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ThemeDevelopedBy"
-                    android:id="@+id/textView14"
-                    android:layout_alignParentStart="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/accent"
-                    android:layout_marginTop="16dp"
-                    />
+                    android:text="@string/License1about"
+                    android:id="@+id/tv_license1about"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="48dp"
 
-                <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/listView6"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/textView14"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
-
-                <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="#B6B6B6"
-                    android:layout_below="@+id/listView6"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/View6" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/DevelopedBy"
-                    android:id="@+id/textView19"
-                    android:layout_alignParentStart="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/accent"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/View6" />
-
-                <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/listView7"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/textView19"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
-
-                <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="#B6B6B6"
-                    android:layout_below="@+id/listView7"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/View2"/>
+                    android:textColor="@color/text_color_secondary"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ThanksTo"
-                    android:id="@+id/textView16"
-                    android:layout_alignParentStart="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/accent"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/View2" />
-
-
-                <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/listView2"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/textView16"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
-
-                <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/listView4"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/listView2"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
-
-                <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/listView5"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/listView4"
-                    android:layout_alignParentStart="true"
-                    android:elevation="1dp" />
-
-
-                <View  android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="#B6B6B6"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/View3"
-                    android:layout_below="@+id/listView5" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/OpenSourceLicenses"
-                    android:id="@+id/textView17"
-                    android:layout_alignParentStart="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/accent"
-                    android:layout_marginTop="16dp"
-                    android:layout_below="@+id/View3" />
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License1"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
+                    android:text="@string/ApacheLicense"
+                    android:id="@+id/tv_license1license"
+                    android:layout_gravity="left"
                     android:layout_marginBottom="8dp"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background"
-                    android:layout_below="@+id/textView17">
-
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License1"
-                        android:id="@+id/License7"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License1about"
-                        android:id="@+id/textView451"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="48dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                    android:layout_marginLeft="16dp"
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ApacheLicense"
-                        android:id="@+id/textView46611"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
+                    android:layout_marginTop="72dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-
-                        android:layout_marginTop="72dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information4"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License1"
-                        android:padding="8dp"
-                        android:nestedScrollingEnabled="false" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
+                <ImageButton
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/CardView_License1"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License2"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background">
+                    android:id="@+id/imBu_more1"
+                    android:layout_alignBottom="@+id/CradViewWhatsNew"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@drawable/information"
+                    android:background="@color/button_background"
+                    android:padding="8dp"
+                    android:nestedScrollingEnabled="false" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                card_view:cardBackgroundColor="@color/card_background"
+
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CardView_License1"
+                android:layout_marginTop="16dp"
+                android:id="@+id/CardView_License2"
+                android:elegantTextHeight="false"
+                android:elevation="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/card_background"
+                android:backgroundTint="@color/card_background">
 
 
 
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License2"
-                        android:id="@+id/License10"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License2about"
-                        android:id="@+id/textView451118"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
-
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ApacheLicense"
-                        android:id="@+id/textView466118"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
-
-
-                        android:layout_marginTop="56dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ImgBut_Information6"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/card_background"
-                        android:onClick="License2"
-                        android:padding="8dp" />
-
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    card_view:cardBackgroundColor="@color/card_background"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="@string/License2"
+                    android:id="@+id/tv_license2"
                     android:layout_marginTop="16dp"
-                    android:id="@+id/CardView_License3"
-                    android:elegantTextHeight="false"
-                    android:elevation="5dp"
+                    android:textSize="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/about_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/License2about"
+                    android:id="@+id/tv_license2about"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginLeft="16dp"
+
+                    android:textColor="@color/text_color_secondary"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ApacheLicense"
+                    android:id="@+id/tv_license2license"
+                    android:layout_gravity="left"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+
+
+                    android:layout_marginTop="56dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imBu_more2"
+                    android:layout_alignBottom="@+id/CradViewWhatsNew"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@drawable/information"
                     android:background="@color/card_background"
-                    android:backgroundTint="@color/card_background"
-                    android:layout_below="@+id/CardView_License2">
+                    android:padding="8dp" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                card_view:cardBackgroundColor="@color/card_background"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/CardView_License3"
+                android:elegantTextHeight="false"
+                android:elevation="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/card_background"
+                android:backgroundTint="@color/card_background"
+                android:layout_below="@+id/CardView_License2">
 
 
 
 
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="@string/License3"
-                        android:id="@+id/tv_license3"
-                        android:layout_marginTop="16dp"
-                        android:textSize="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="@color/about_text" />
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="@string/License3"
+                    android:id="@+id/tv_license3"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/about_text" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/License3about"
-                        android:id="@+id/tv_license3about"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginLeft="16dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/License3about"
+                    android:id="@+id/tv_license3about"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginLeft="16dp"
 
-                        android:textColor="@color/text_color_secondary"
-                        android:textSize="14dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ApacheLicense"
-                        android:id="@+id/tv_license3license"
-                        android:layout_gravity="left"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="16dp"
+                    android:textColor="@color/text_color_secondary"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
 
-                        android:layout_marginTop="72dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imBu_more3"
-                        android:layout_alignBottom="@+id/CradViewWhatsNew"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical|right"
-                        android:src="@drawable/information"
-                        android:background="@color/button_background"
-                        android:onClick="License3"
-                        android:padding="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ApacheLicense"
+                    android:id="@+id/tv_license3license"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
 
 
-                </android.support.v7.widget.CardView>
+                    android:layout_marginTop="72dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imBu_more3"
+                    android:layout_alignBottom="@+id/CradViewWhatsNew"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@drawable/information"
+                    android:background="@color/button_background"
+                    android:padding="8dp" />
 
 
-            </RelativeLayout>
-
-
+            </android.support.v7.widget.CardView>
         </RelativeLayout>
-
     </ScrollView>
 </RelativeLayout>

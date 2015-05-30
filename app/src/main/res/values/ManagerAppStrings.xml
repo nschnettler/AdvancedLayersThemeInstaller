@@ -32,6 +32,14 @@
         <string name="DevelopedBy">Installer App developed by:</string>
         <string name="ThemeDevelopedBy">Theme made by:</string>
         <string name="ThanksTo">Thanks to:</string>
+        <string name="NameOfAppDeveloper">Niklas Schnettler</string>
+        <string name="ThanksTo1">BitSyko Development Team</string>
+        <string name="ThanksTo2">Mailson Campos</string>
+        <string name="ThanksTo3">Stefano Trevisani</string>
+        <string name="AppDeveloperGooglePlus">https://plus.google.com/u/0/+NiklasSchnettler/posts</string>
+        <string name="Thanksto1GooglePlus">https://plus.google.com/u/0/communities/102261717366580091389</string>
+        <string name="Thanksto2GooglePlus">https://plus.google.com/u/0/+MailsonCampos/posts</string>
+        <string name="Thanksto3GooglePlus">https://plus.google.com/+StefanoTrevisani/posts</string>
 
 
 

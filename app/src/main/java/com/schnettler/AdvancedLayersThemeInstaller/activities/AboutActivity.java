@@ -5,11 +5,14 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -19,237 +22,192 @@ import com.schnettler.AdvancedLayersThemeInstaller.adapters.CustomListAdapter;
 
 
 public class AboutActivity extends Activity {
-    ListView list;
-    ListView list2;
-    ListView list3;
-    ListView list4;
-    ListView list5;
-    String community = null;
-    String LinkToYourProfile = null;
-    String[] web1 = {
-            "Niklas Schnettler",
-    } ;
-    String[] web2 = {
-            "Bitsyko Development Team",
-    } ;
-    String[] web4 = {
-            "Mailson Campos",
-    } ;
-    String[] web5 = {
-            "Stefano Trevisani",
-    } ;
+    ListView list1, list2, list3, list4, list5;
+    ImageButton moreButton1, moreButton2, moreButton3;
 
-    Integer[] imageId1 = {
+    Integer[] listImage2 = {
             R.drawable.niklas,
     };
-    Integer[] imageId2 = {
+    Integer[] listImage3 = {
             R.drawable.bitsyko,
     };
-    Integer[] imageId3 = {
+    Integer[] listImage1 = {
             R.drawable.themedeveloper,
     };
-    Integer[] imageId4 = {
+    Integer[] listImage4 = {
             R.drawable.mailson,
     };
-    Integer[] imageId5 = {
+    Integer[] listImage5 = {
             R.drawable.stefano,
     };
-
-
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        String test = this.getString(R.string.NameOfThemeDeveloper);
 
-        community = this.getString(R.string.community);
-        LinkToYourProfile = this.getString(R.string.LinkToYourProfile);
-        String[] web3 = {
-                test,
+        String[] ListContent2 = {
+                this.getString(R.string.NameOfAppDeveloper)
+        } ;
+        String[] ListContent3 = {
+                this.getString(R.string.ThanksTo1)
+        } ;
+        String[] ListContent4 = {
+                this.getString(R.string.ThanksTo2)
+        } ;
+        String[] ListContent5 = {
+                this.getString(R.string.ThanksTo3)
+        } ;
+
+        String[] ListContent1 = {
+                this.getString(R.string.NameOfThemeDeveloper)
         };
 
+
+        //set Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         setActionBar(toolbar);
 
-        //List 2
-        CustomListAdapter adapter = new
-                CustomListAdapter(AboutActivity.this, web1, imageId1);
-        list=(ListView)findViewById(R.id.listView7);
-        list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //List 1 //Theme Developer
+        CustomListAdapter adapter3 = new CustomListAdapter(AboutActivity.this, ListContent1, listImage1);
+        list1=(ListView)findViewById(R.id.listView_ThemeDeveloper);
+        list1.setAdapter(adapter3);
+        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+NiklasSchnettler/posts")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.LinkToYourProfile))));
             }
         });
 
-
-        //List 1
-        CustomListAdapter adapter3 = new
-                CustomListAdapter(AboutActivity.this, web3, imageId3);
-        list3=(ListView)findViewById(R.id.listView6);
-        list3.setAdapter(adapter3);
-
-        list3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(LinkToYourProfile)));
-            }
-        });
-
-        //List3
-        CustomListAdapter adapter2 = new
-                CustomListAdapter(AboutActivity.this, web2, imageId2);
-        list2=(ListView)findViewById(R.id.listView2);
-        list2.setAdapter(adapter2);
+        //List 2 //App Developer // Niklas Schnettler
+        CustomListAdapter adapter = new CustomListAdapter(AboutActivity.this, ListContent2, listImage2);
+        list2=(ListView)findViewById(R.id.listView_AppDeveloper);
+        list2.setAdapter(adapter);
         list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/u/0/communities/102261717366580091389")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.AppDeveloperGooglePlus))));
             }
         });
 
-        //List4
+
+        //List3 //Thanks To 1 //Bitsyko Development Team
+        CustomListAdapter adapter2 = new
+                CustomListAdapter(AboutActivity.this, ListContent3, listImage3);
+        list3=(ListView)findViewById(R.id.listView_ThanksTo1);
+        list3.setAdapter(adapter2);
+        list3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.Thanksto1GooglePlus))));
+            }
+        });
+
+        //List4 //Thanks to 2 //Mailson Campos
         CustomListAdapter adapter4 = new
-                CustomListAdapter(AboutActivity.this, web4, imageId4);
-        list4=(ListView)findViewById(R.id.listView4);
+                CustomListAdapter(AboutActivity.this, ListContent4, listImage4);
+        list4=(ListView)findViewById(R.id.listView_ThanksTo2);
         list4.setAdapter(adapter4);
         list4.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/u/0/+MailsonCampos/posts")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.Thanksto2GooglePlus))));
             }
         });
 
-        //List5
+        //List5 //Thanks to 3 //Stefano Trevisani
         CustomListAdapter adapter5 = new
-                CustomListAdapter(AboutActivity.this, web5, imageId5);
-        list5=(ListView)findViewById(R.id.listView5);
+                CustomListAdapter(AboutActivity.this, ListContent5, listImage5);
+        list5=(ListView)findViewById(R.id.listView_ThanksTo3);
         list5.setAdapter(adapter5);
         list5.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/+StefanoTrevisani/posts")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.Thanksto3GooglePlus))));
             }
         });
 
 
-
-
-
-
-        TextView tv_version = (TextView) findViewById(R.id.textView_version);
+        //app version textView
+        TextView tv_version = (TextView) findViewById(R.id.tv_Version);
         try {
             String versionName = AboutActivity.this.getPackageManager()
                     .getPackageInfo(AboutActivity.this.getPackageName(), 0).versionName;
             tv_version.setText("Version " + versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
-
         }
 
+        //i Buttons
+        moreButton1 = (ImageButton) findViewById(R.id.imBu_more1);
+        moreButton2 = (ImageButton) findViewById(R.id.imBu_more2);
+        moreButton3 = (ImageButton) findViewById(R.id.imBu_more3);
+        moreButton1.setOnClickListener(onclicklistener);
+        moreButton2.setOnClickListener(onclicklistener);
+        moreButton3.setOnClickListener(onclicklistener);
 
-
-
-        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(community)));
-            }
-        });
 
 
     }
 
-
-
-
-    public void License1(View view) {
-
-        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
-        View view3 = li.inflate(R.layout.dialog_license, null);
-        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
-        tv_license.setText(R.string.License1more);
-        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
-                dialog.setTitle(R.string.License1);
-                dialog.setView(view3);
-                dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License1github)));
-                        startActivity(browserIntent);
-                    }
-                });
-
-                dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-                dialog.show();
-    }
-
-    public void License2(View view) {
-
-        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
-        View view3 = li.inflate(R.layout.dialog_license, null);
-        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
-        tv_license.setText(R.string.License2more);
-        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
-        dialog.setTitle(R.string.License2);
-        dialog.setView(view3);
-        dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License2github)));
-                startActivity(browserIntent);
+    View.OnClickListener onclicklistener = new View.OnClickListener() {
+        public void onClick(View v) {
+            String dialogText = "";
+            String dialogTitleText = "";
+            LayoutInflater li = LayoutInflater.from(AboutActivity.this);
+            View view3 = li.inflate(R.layout.dialog_license, null);
+            final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
+            final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
+            dialog.setView(view3);
+            switch(v.getId()) {
+                case R.id.imBu_more1:
+                    dialogText = getResources().getString(R.string.License1more);
+                    dialogTitleText = getResources().getString(R.string.License1);
+                    dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License1github)));
+                            startActivity(browserIntent);
+                        }
+                    });
+                    break;
+                case R.id.imBu_more2:
+                    dialogText = getResources().getString(R.string.License2more);
+                    dialogTitleText = getResources().getString(R.string.License2);
+                    dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License2github)));
+                            startActivity(browserIntent);
+                        }
+                    });
+                    break;
+                case R.id.imBu_more3:
+                    dialogText = getResources().getString(R.string.License3more);
+                    dialogTitleText = getResources().getString(R.string.License3);
+                    dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License3github)));
+                            startActivity(browserIntent);
+                        }
+                    });
+                    break;
             }
-        });
-
-        dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        dialog.show();
-    }
-
-
-    public void License3(View view) {
-
-        LayoutInflater li = LayoutInflater.from(AboutActivity.this);
-        View view3 = li.inflate(R.layout.dialog_license, null);
-        final TextView tv_license = (TextView) view3.findViewById(R.id.tv_license);
-        tv_license.setText(R.string.License3more);
-        final AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
-        dialog.setTitle(R.string.License3);
-        dialog.setView(view3);
-        dialog.setPositiveButton(R.string.VisitGithub, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.License3github)));
-                startActivity(browserIntent);
-            }
-        });
-
-        dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        dialog.show();
-    }
+            dialog.setTitle(dialogTitleText);
+            tv_license.setText(dialogText);
+            dialog.setNegativeButton(R.string.Close, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            dialog.show();
+        }
+    };
 
     public void openCommunity(View view) {
         // Do something in response to button
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(community)));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.community))));
 
     }
-
-
-
-
-
-
-
 }
 
